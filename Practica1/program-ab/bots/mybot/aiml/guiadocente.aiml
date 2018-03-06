@@ -1,10 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
+	<!--Pregunta 1 -->
+	<!-- Original -->
+	<category>
+		<pattern>COMO CONSIGO SUPERAR LA PARTE PRACTICA</pattern>
+		<template>Respuesta pregunta 1</template>
+	</category>
 
 	<category>
-		<pattern>hola *</pattern>
-		<template>Hola, que tal?</template>
+		<pattern> ^ SUPERAR ^ PARTE PRACTICA ^</pattern>
+		<template><srai>COMO CONSIGO SUPERAR LA PARTE PRACTICA</srai></template>
 	</category>
+	<category>
+		<pattern> ^ PARTE PRACTICA ^ SUPERAR  ^</pattern>
+		<template><srai>COMO CONSIGO SUPERAR LA PARTE PRACTICA</srai></template>
+	</category>
+	<category>
+		<pattern> ^ APROBAR ^ PARTE PRACTICA ^</pattern>
+		<template><srai>COMO CONSIGO SUPERAR LA PARTE PRACTICA</srai></template>
+	</category>
+	<category>
+		<pattern> ^ PARTE PRACTICA ^ APROBAR  ^</pattern>
+		<template><srai>COMO CONSIGO SUPERAR LA PARTE PRACTICA</srai></template>
+	</category>
+
+	<!--Pregunta 2 -->
+	<!-- Original -->
+	<category>
+		<pattern>COMO SE EVALUA EN LA CONVOCATORIA ORDINARIA</pattern>
+		<template>Respuesta pregunta 2</template>
+	</category>
+
+	<category>
+		<pattern> ^ EVALUA ^ CONVOCATORIA ORDINARIA ^</pattern>
+		<template><srai>COMO SE EVALUA EN LA CONVOCATORIA ORDINARIA</srai></template>
+	</category>
+	<category>
+		<pattern> ^ CONVOCATORIA ORDINARIA ^ EVALUA  ^</pattern>
+		<template><srai>COMO SE EVALUA EN LA CONVOCATORIA ORDINARIA</srai></template>
+	</category>
+	<category>
+		<pattern> ^ EVALUACION ^ CONVOCATORIA ORDINARIA ^</pattern>
+		<template><srai>COMO SE EVALUA EN LA CONVOCATORIA ORDINARIA</srai></template>
+	</category>
+	<category>
+		<pattern> ^ CONVOCATORIA ORDINARIA ^ EVALUACION  ^</pattern>
+		<template><srai>COMO SE EVALUA EN LA CONVOCATORIA ORDINARIA</srai></template>
+	</category>
+
+	<!--Pregunta 3 -->
+	<!-- Original -->
+	<category>
+		<pattern>HAY EXAMEN DE PRACTICAS EN LA CONVOCATORIA EXTRAORDINARIA</pattern>
+		<template>Respuesta pregunta 3</template>
+	</category>
+
+	<category>
+		<pattern> ^ HAY ^ EXAMEN ^ PRACTICAS ^ CONVOCATORIA EXTRAORDINARIA ^</pattern>
+		<template><srai>HAY EXAMEN DE PRACTICAS EN LA CONVOCATORIA EXTRAORDINARIA</srai></template>
+	</category>
+	<category>
+		<pattern> ^ CONVOCATORIA EXTRAORDINARIA ^ HAY ^ EXAMEN ^ PRACTICAS  ^</pattern>
+		<template><srai>HAY EXAMEN DE PRACTICAS EN LA CONVOCATORIA EXTRAORDINARIA</srai></template>
+	</category>
+	<category>
+		<pattern> ^ EXISTE ^ EXAMEN ^ PRACTICAS ^ CONVOCATORIA EXTRAORDINARIA ^</pattern>
+		<template><srai>HAY EXAMEN DE PRACTICAS EN LA CONVOCATORIA EXTRAORDINARIA</srai></template>
+	</category>
+	<category>
+		<pattern> ^ CONVOCATORIA EXTRAORDINARIA ^ EXISTE ^ EXAMEN ^ PRACTICAS  ^</pattern>
+		<template><srai>HAY EXAMEN DE PRACTICAS EN LA CONVOCATORIA EXTRAORDINARIA</srai></template>
+	</category>
+
+	<!--Pregunta 4 -->
+	<!-- Original -->
+	<category>
+		<pattern>QUE PASA SI NO PUEDO ASISTIR A CLASE REGULARMENTE</pattern>
+		<template>Respuesta pregunta 4</template>
+	</category>
+
+	<category>
+		<pattern> ^ NO PUEDO ASISTIR ^  CLASE ^</pattern>
+		<template><srai>QUE PASA SI NO PUEDO ASISTIR A CLASE REGULARMENTE</srai></template>
+	</category>
+	<category>
+		<pattern> ^ CLASE ^ NO PUEDO ASISTIR ^ </pattern>
+		<template><srai>QUE PASA SI NO PUEDO ASISTIR A CLASE REGULARMENTE</srai></template>
+	</category>
+	<category>
+		<pattern> ^ NO PUEDO IR ^  CLASE ^</pattern>
+		<template><srai>QUE PASA SI NO PUEDO ASISTIR A CLASE REGULARMENTE</srai></template>
+	</category>
+	<category>
+		<pattern> ^ CLASE ^ NO PUEDO IR ^ </pattern>
+		<template><srai>QUE PASA SI NO PUEDO ASISTIR A CLASE REGULARMENTE</srai></template>
+	</category>
+	
+	<!--Pregunta 5-->
+	<!-- Original -->
+	<category>
+		<pattern>HAY NOTA MINIMA PARA APROBAR</pattern>
+		<template>Respuesta pregunta 5</template>
+	</category>
+
+	<category>
+		<pattern> ^ NOTA MINIMA ^ APROBAR ^ </pattern>
+		<template><srai>HAY NOTA MINIMA PARA APROBAR</srai></template>
+	</category>
+	<category>
+		<pattern> ^  APROBAR ^ NOTA MINIMA ^ </pattern>
+		<template><srai>HAY NOTA MINIMA PARA APROBAR</srai></template>
+	</category>
+
+	<!--Pregunta 6-->
+	<!-- Original -->
 
 	<category>
 		<pattern>hola</pattern>
