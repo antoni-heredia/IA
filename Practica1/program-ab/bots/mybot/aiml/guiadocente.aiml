@@ -114,6 +114,108 @@
 
 	<!--Pregunta 6-->
 	<!-- Original -->
+	<category>
+		<pattern>LAS PRACTICAS SON OBLIGATORIAS</pattern>
+		<template>Respuesta pregunta 6</template>
+	</category>
+
+	<category>
+		<pattern> ^ PRACTICAS ^ OBLIGATORIAS ^ </pattern>
+		<template><srai>LAS PRACTICAS SON OBLIGATORIAS</srai></template>
+	</category>
+	<category>
+		<pattern> ^  OBLIGATORIAS ^ PRACTICAS ^ </pattern>
+		<template><srai>LAS PRACTICAS SON OBLIGATORIAS</srai></template>
+	</category>
+	
+	<!--Pregunta 7-->
+	<!-- Original -->
+	<category>
+		<pattern>CUANTO VALE CADA PRACTICA CON RESPECTO A LA NOTA FINAL</pattern>
+		<template>Respuesta pregunta 7</template>
+	</category>
+
+	<category>
+		<pattern> ^ PRACTICA+ ^ CUANTO VALE+ ^ NOTA FINAL ^ </pattern>
+		<template><srai>CUANTO VALE CADA PRACTICA CON RESPECTO A LA NOTA FINAL</srai></template>
+	</category>
+
+	<category>
+		<pattern> ^ PRACTICA+ ^  NOTA FINAL ^ CUANTO VALE+ ^ </pattern>
+		<template><srai>CUANTO VALE CADA PRACTICA CON RESPECTO A LA NOTA FINAL</srai></template>
+	</category>
+
+	<category>
+		<pattern> ^ CUANTO VALE+ ^ PRACTICA+ ^  NOTA FINAL ^  </pattern>
+		<template><srai>CUANTO VALE CADA PRACTICA CON RESPECTO A LA NOTA FINAL</srai></template>
+	</category>
+
+	<!--Pregunta 8-->
+	<!-- Original -->
+
+	<category>
+		<pattern>CUANTO VALE LA PARTICIPACION CON RESPECTO A LA NOTA FINAL</pattern>
+		<template>Respuesta pregunta 8</template>
+	</category>
+
+	<category>
+		<pattern> ^ PARTICIPACION+ ^ CUANTO VALE+ ^ NOTA FINAL ^ </pattern>
+		<template><srai>CUANTO VALE LA PARTICIPACION CON RESPECTO A LA NOTA FINAL</srai></template>
+	</category>
+
+	<category>
+		<pattern> ^ PARTICIPACION+ ^  NOTA FINAL ^ CUANTO VALE+ ^ </pattern>
+		<template><srai>CUANTO VALE LA PARTICIPACION CON RESPECTO A LA NOTA FINAL</srai></template>
+	</category>
+
+	<category>
+		<pattern> ^ CUANTO VALE+ ^ PARTICIPACION+ ^  NOTA FINAL ^  </pattern>
+		<template><srai>CUANTO VALE LA PARTICIPACION CON RESPECTO A LA NOTA FINAL</srai></template>
+	</category>
+	
+	<!--Pregunta 9-->
+	<!-- Original -->
+
+	<category>
+		<pattern>COMO SE CONSIGUEN PUNTOS POR PARTICIPACION</pattern>
+		<template>Respuesta pregunta 9</template>
+	</category>
+
+	<category>
+		<pattern> ^ CONSIGUEN+ ^ PUNTOS ^ PARTICIPACION ^ </pattern>
+		<template><srai>COMO SE CONSIGUEN PUNTOS POR PARTICIPACION</srai></template>
+	</category>
+
+	<category>
+		<pattern> ^ CONSIGUEN+ ^  PARTICIPACION ^ PUNTOS ^ </pattern>
+		<template><srai>COMO SE CONSIGUEN PUNTOS POR PARTICIPACION</srai></template>
+	</category>
+
+	<category>
+		<pattern> ^ PUNTOS ^ CONSIGUEN+ ^  PARTICIPACION ^  </pattern>
+		<template><srai>COMO SE CONSIGUEN PUNTOS POR PARTICIPACION</srai></template>
+	</category>
+
+	<!--Pregunta 10-->
+	<!-- Original -->
+
+	<category>
+		<pattern>LOS TRABAJOS SON INDIVIDUALES</pattern>
+		<template>Respuesta pregunta 10</template>
+	</category>
+
+	<category>
+		<pattern> ^ TRABAJO+ ^ [INDIVIDUALES INDIVIDUAL] ^ </pattern>
+		<template><srai>LOS TRABAJOS SON INDIVIDUALES</srai></template>
+	</category>
+
+	<category>
+		<pattern> ^ [INDIVIDUALES INDIVIDUAL] ^ TRABAJO+ ^ </pattern>
+		<template><srai>LOS TRABAJOS SON INDIVIDUALES</srai></template>
+	</category>
+
+	
+
 
 	<category>
 		<pattern>hola</pattern>
