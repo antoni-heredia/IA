@@ -6,233 +6,554 @@
 		<pattern>COMO CONSIGO SUPERAR LA PARTE PRACTICA</pattern>
 		<template>Respuesta pregunta 1</template>
 	</category>
-
 	<category>
 		<pattern> ^ SUPERAR ^ PARTE PRACTICA ^</pattern>
-		<template><srai>COMO CONSIGO SUPERAR LA PARTE PRACTICA</srai></template>
+		<template>
+			<srai>COMO CONSIGO SUPERAR LA PARTE PRACTICA</srai>
+		</template>
 	</category>
 	<category>
 		<pattern> ^ PARTE PRACTICA ^ SUPERAR  ^</pattern>
-		<template><srai>COMO CONSIGO SUPERAR LA PARTE PRACTICA</srai></template>
+		<template>
+			<srai>COMO CONSIGO SUPERAR LA PARTE PRACTICA</srai>
+		</template>
 	</category>
 	<category>
 		<pattern> ^ APROBAR ^ PARTE PRACTICA ^</pattern>
-		<template><srai>COMO CONSIGO SUPERAR LA PARTE PRACTICA</srai></template>
+		<template>
+			<srai>COMO CONSIGO SUPERAR LA PARTE PRACTICA</srai>
+		</template>
 	</category>
 	<category>
 		<pattern> ^ PARTE PRACTICA ^ APROBAR  ^</pattern>
-		<template><srai>COMO CONSIGO SUPERAR LA PARTE PRACTICA</srai></template>
+		<template>
+			<srai>COMO CONSIGO SUPERAR LA PARTE PRACTICA</srai>
+		</template>
 	</category>
-
 	<!--Pregunta 2 -->
 	<!-- Original -->
 	<category>
 		<pattern>COMO SE EVALUA EN LA CONVOCATORIA ORDINARIA</pattern>
 		<template>Respuesta pregunta 2</template>
 	</category>
-
 	<category>
 		<pattern> ^ EVALUA ^ CONVOCATORIA ORDINARIA ^</pattern>
-		<template><srai>COMO SE EVALUA EN LA CONVOCATORIA ORDINARIA</srai></template>
+		<template>
+			<srai>COMO SE EVALUA EN LA CONVOCATORIA ORDINARIA</srai>
+		</template>
 	</category>
 	<category>
 		<pattern> ^ CONVOCATORIA ORDINARIA ^ EVALUA  ^</pattern>
-		<template><srai>COMO SE EVALUA EN LA CONVOCATORIA ORDINARIA</srai></template>
+		<template>
+			<srai>COMO SE EVALUA EN LA CONVOCATORIA ORDINARIA</srai>
+		</template>
 	</category>
 	<category>
 		<pattern> ^ EVALUACION ^ CONVOCATORIA ORDINARIA ^</pattern>
-		<template><srai>COMO SE EVALUA EN LA CONVOCATORIA ORDINARIA</srai></template>
+		<template>
+			<srai>COMO SE EVALUA EN LA CONVOCATORIA ORDINARIA</srai>
+		</template>
 	</category>
 	<category>
 		<pattern> ^ CONVOCATORIA ORDINARIA ^ EVALUACION  ^</pattern>
-		<template><srai>COMO SE EVALUA EN LA CONVOCATORIA ORDINARIA</srai></template>
+		<template>
+			<srai>COMO SE EVALUA EN LA CONVOCATORIA ORDINARIA</srai>
+		</template>
 	</category>
-
 	<!--Pregunta 3 -->
 	<!-- Original -->
 	<category>
 		<pattern>HAY EXAMEN DE PRACTICAS EN LA CONVOCATORIA EXTRAORDINARIA</pattern>
 		<template>Respuesta pregunta 3</template>
 	</category>
-
 	<category>
 		<pattern> ^ HAY ^ EXAMEN ^ PRACTICAS ^ CONVOCATORIA EXTRAORDINARIA ^</pattern>
-		<template><srai>HAY EXAMEN DE PRACTICAS EN LA CONVOCATORIA EXTRAORDINARIA</srai></template>
+		<template>
+			<srai>HAY EXAMEN DE PRACTICAS EN LA CONVOCATORIA EXTRAORDINARIA</srai>
+		</template>
 	</category>
 	<category>
 		<pattern> ^ CONVOCATORIA EXTRAORDINARIA ^ HAY ^ EXAMEN ^ PRACTICAS  ^</pattern>
-		<template><srai>HAY EXAMEN DE PRACTICAS EN LA CONVOCATORIA EXTRAORDINARIA</srai></template>
+		<template>
+			<srai>HAY EXAMEN DE PRACTICAS EN LA CONVOCATORIA EXTRAORDINARIA</srai>
+		</template>
 	</category>
 	<category>
 		<pattern> ^ EXISTE ^ EXAMEN ^ PRACTICAS ^ CONVOCATORIA EXTRAORDINARIA ^</pattern>
-		<template><srai>HAY EXAMEN DE PRACTICAS EN LA CONVOCATORIA EXTRAORDINARIA</srai></template>
+		<template>
+			<srai>HAY EXAMEN DE PRACTICAS EN LA CONVOCATORIA EXTRAORDINARIA</srai>
+		</template>
 	</category>
 	<category>
 		<pattern> ^ CONVOCATORIA EXTRAORDINARIA ^ EXISTE ^ EXAMEN ^ PRACTICAS  ^</pattern>
-		<template><srai>HAY EXAMEN DE PRACTICAS EN LA CONVOCATORIA EXTRAORDINARIA</srai></template>
+		<template>
+			<srai>HAY EXAMEN DE PRACTICAS EN LA CONVOCATORIA EXTRAORDINARIA</srai>
+		</template>
 	</category>
-
 	<!--Pregunta 4 -->
 	<!-- Original -->
 	<category>
 		<pattern>QUE PASA SI NO PUEDO ASISTIR A CLASE REGULARMENTE</pattern>
 		<template>Respuesta pregunta 4</template>
 	</category>
-
 	<category>
 		<pattern> ^ NO PUEDO ASISTIR ^  CLASE ^</pattern>
-		<template><srai>QUE PASA SI NO PUEDO ASISTIR A CLASE REGULARMENTE</srai></template>
+		<template>
+			<srai>QUE PASA SI NO PUEDO ASISTIR A CLASE REGULARMENTE</srai>
+		</template>
 	</category>
 	<category>
 		<pattern> ^ CLASE ^ NO PUEDO ASISTIR ^ </pattern>
-		<template><srai>QUE PASA SI NO PUEDO ASISTIR A CLASE REGULARMENTE</srai></template>
+		<template>
+			<srai>QUE PASA SI NO PUEDO ASISTIR A CLASE REGULARMENTE</srai>
+		</template>
 	</category>
 	<category>
 		<pattern> ^ NO PUEDO IR ^  CLASE ^</pattern>
-		<template><srai>QUE PASA SI NO PUEDO ASISTIR A CLASE REGULARMENTE</srai></template>
+		<template>
+			<srai>QUE PASA SI NO PUEDO ASISTIR A CLASE REGULARMENTE</srai>
+		</template>
 	</category>
 	<category>
 		<pattern> ^ CLASE ^ NO PUEDO IR ^ </pattern>
-		<template><srai>QUE PASA SI NO PUEDO ASISTIR A CLASE REGULARMENTE</srai></template>
+		<template>
+			<srai>QUE PASA SI NO PUEDO ASISTIR A CLASE REGULARMENTE</srai>
+		</template>
 	</category>
-	
 	<!--Pregunta 5-->
 	<!-- Original -->
 	<category>
 		<pattern>HAY NOTA MINIMA PARA APROBAR</pattern>
 		<template>Respuesta pregunta 5</template>
 	</category>
-
 	<category>
 		<pattern> ^ NOTA MINIMA ^ APROBAR ^ </pattern>
-		<template><srai>HAY NOTA MINIMA PARA APROBAR</srai></template>
+		<template>
+			<srai>HAY NOTA MINIMA PARA APROBAR</srai>
+		</template>
 	</category>
 	<category>
 		<pattern> ^  APROBAR ^ NOTA MINIMA ^ </pattern>
-		<template><srai>HAY NOTA MINIMA PARA APROBAR</srai></template>
+		<template>
+			<srai>HAY NOTA MINIMA PARA APROBAR</srai>
+		</template>
 	</category>
-
 	<!--Pregunta 6-->
 	<!-- Original -->
 	<category>
 		<pattern>LAS PRACTICAS SON OBLIGATORIAS</pattern>
 		<template>Respuesta pregunta 6</template>
 	</category>
-
 	<category>
 		<pattern> ^ PRACTICAS ^ OBLIGATORIAS ^ </pattern>
-		<template><srai>LAS PRACTICAS SON OBLIGATORIAS</srai></template>
+		<template>
+			<srai>LAS PRACTICAS SON OBLIGATORIAS</srai>
+		</template>
 	</category>
 	<category>
 		<pattern> ^  OBLIGATORIAS ^ PRACTICAS ^ </pattern>
-		<template><srai>LAS PRACTICAS SON OBLIGATORIAS</srai></template>
+		<template>
+			<srai>LAS PRACTICAS SON OBLIGATORIAS</srai>
+		</template>
 	</category>
-	
 	<!--Pregunta 7-->
 	<!-- Original -->
 	<category>
 		<pattern>CUANTO VALE CADA PRACTICA CON RESPECTO A LA NOTA FINAL</pattern>
 		<template>Respuesta pregunta 7</template>
 	</category>
-
 	<category>
 		<pattern> ^ PRACTICA+ ^ CUANTO VALE+ ^ NOTA FINAL ^ </pattern>
-		<template><srai>CUANTO VALE CADA PRACTICA CON RESPECTO A LA NOTA FINAL</srai></template>
+		<template>
+			<srai>CUANTO VALE CADA PRACTICA CON RESPECTO A LA NOTA FINAL</srai>
+		</template>
 	</category>
-
 	<category>
 		<pattern> ^ PRACTICA+ ^  NOTA FINAL ^ CUANTO VALE+ ^ </pattern>
-		<template><srai>CUANTO VALE CADA PRACTICA CON RESPECTO A LA NOTA FINAL</srai></template>
+		<template>
+			<srai>CUANTO VALE CADA PRACTICA CON RESPECTO A LA NOTA FINAL</srai>
+		</template>
 	</category>
-
 	<category>
 		<pattern> ^ CUANTO VALE+ ^ PRACTICA+ ^  NOTA FINAL ^  </pattern>
-		<template><srai>CUANTO VALE CADA PRACTICA CON RESPECTO A LA NOTA FINAL</srai></template>
+		<template>
+			<srai>CUANTO VALE CADA PRACTICA CON RESPECTO A LA NOTA FINAL</srai>
+		</template>
 	</category>
-
 	<!--Pregunta 8-->
 	<!-- Original -->
-
 	<category>
 		<pattern>CUANTO VALE LA PARTICIPACION CON RESPECTO A LA NOTA FINAL</pattern>
 		<template>Respuesta pregunta 8</template>
 	</category>
-
 	<category>
 		<pattern> ^ PARTICIPACION+ ^ CUANTO VALE+ ^ NOTA FINAL ^ </pattern>
-		<template><srai>CUANTO VALE LA PARTICIPACION CON RESPECTO A LA NOTA FINAL</srai></template>
+		<template>
+			<srai>CUANTO VALE LA PARTICIPACION CON RESPECTO A LA NOTA FINAL</srai>
+		</template>
 	</category>
-
 	<category>
 		<pattern> ^ PARTICIPACION+ ^  NOTA FINAL ^ CUANTO VALE+ ^ </pattern>
-		<template><srai>CUANTO VALE LA PARTICIPACION CON RESPECTO A LA NOTA FINAL</srai></template>
+		<template>
+			<srai>CUANTO VALE LA PARTICIPACION CON RESPECTO A LA NOTA FINAL</srai>
+		</template>
 	</category>
-
 	<category>
 		<pattern> ^ CUANTO VALE+ ^ PARTICIPACION+ ^  NOTA FINAL ^  </pattern>
-		<template><srai>CUANTO VALE LA PARTICIPACION CON RESPECTO A LA NOTA FINAL</srai></template>
+		<template>
+			<srai>CUANTO VALE LA PARTICIPACION CON RESPECTO A LA NOTA FINAL</srai>
+		</template>
 	</category>
-	
 	<!--Pregunta 9-->
 	<!-- Original -->
-
 	<category>
 		<pattern>COMO SE CONSIGUEN PUNTOS POR PARTICIPACION</pattern>
 		<template>Respuesta pregunta 9</template>
 	</category>
-
 	<category>
 		<pattern> ^ CONSIGUEN+ ^ PUNTOS ^ PARTICIPACION ^ </pattern>
-		<template><srai>COMO SE CONSIGUEN PUNTOS POR PARTICIPACION</srai></template>
+		<template>
+			<srai>COMO SE CONSIGUEN PUNTOS POR PARTICIPACION</srai>
+		</template>
 	</category>
-
 	<category>
 		<pattern> ^ CONSIGUEN+ ^  PARTICIPACION ^ PUNTOS ^ </pattern>
-		<template><srai>COMO SE CONSIGUEN PUNTOS POR PARTICIPACION</srai></template>
+		<template>
+			<srai>COMO SE CONSIGUEN PUNTOS POR PARTICIPACION</srai>
+		</template>
 	</category>
-
 	<category>
 		<pattern> ^ PUNTOS ^ CONSIGUEN+ ^  PARTICIPACION ^  </pattern>
-		<template><srai>COMO SE CONSIGUEN PUNTOS POR PARTICIPACION</srai></template>
+		<template>
+			<srai>COMO SE CONSIGUEN PUNTOS POR PARTICIPACION</srai>
+		</template>
 	</category>
-
 	<!--Pregunta 10-->
 	<!-- Original -->
-
 	<category>
 		<pattern>LOS TRABAJOS SON INDIVIDUALES</pattern>
 		<template>Respuesta pregunta 10</template>
 	</category>
-
 	<category>
 		<pattern> ^ TRABAJO+ ^ [INDIVIDUALES INDIVIDUAL] ^ </pattern>
-		<template><srai>LOS TRABAJOS SON INDIVIDUALES</srai></template>
+		<template>
+			<srai>LOS TRABAJOS SON INDIVIDUALES</srai>
+		</template>
 	</category>
-
 	<category>
 		<pattern> ^ [INDIVIDUALES INDIVIDUAL] ^ TRABAJO+ ^ </pattern>
-		<template><srai>LOS TRABAJOS SON INDIVIDUALES</srai></template>
+		<template>
+			<srai>LOS TRABAJOS SON INDIVIDUALES</srai>
+		</template>
 	</category>
-
-	
-
-
+	<!--Pregunta 11-->
+	<!-- Original -->
 	<category>
-		<pattern>hola</pattern>
-		<template>Hola de nuevo, que tal?</template>
-	</category>
-
-	<category>
-		<pattern>* que tal tu</pattern>
-		<template>Estoy genial!!!</template>
-	</category>
-	
-	<category>
-		<pattern>^ me llamo *</pattern>
-		<template>Que casualidad <star index="2"/> yo tambien tengo nombre, me llamo HALfonso</template>
+		<pattern>SE PUEDEN HACER LOS TRABAJOS EN GRUPO</pattern>
+		<template>Respuesta pregunta 11</template>
 	</category>
 	<category>
-		<pattern>^ Mi nombre es *</pattern>
-		<template>Hola <star index="2"/></template>
+		<pattern> ^ TRABAJO+ ^ GRUPO+ ^ </pattern>
+		<template>
+			<srai>SE PUEDEN HACER LOS TRABAJOS EN GRUPO</srai>
+		</template>
+	</category>
+	<category>
+		<pattern> ^ GRUPO+ ^ TRABAJO+ ^ </pattern>
+		<template>
+			<srai>SE PUEDEN HACER LOS TRABAJOS EN GRUPO</srai>
+		</template>
+	</category>
+	<category>
+		<pattern> ^ TRABAJO+  ^ GRUPO+ ^ </pattern>
+		<template>
+			<srai>SE PUEDEN HACER LOS TRABAJOS EN GRUPO</srai>
+		</template>
+	</category>
+	<category>
+		<pattern> ^ GRUPO+  ^ TRABAJO+ ^ </pattern>
+		<template>
+			<srai>SE PUEDEN HACER LOS TRABAJOS EN GRUPO</srai>
+		</template>
+	</category>
+	<!--Pregunta 12-->
+	<!-- Original -->
+	<category>
+		<pattern>HAY QUE ENTREGAR LOS EJERCICIOS DE LAS RELACIONES DE PROBLEMAS</pattern>
+		<template>Respuesta pregunta 12</template>
+	</category>
+	<category>
+		<pattern> ^ ENTREGAR ^ EJERCICIO+ ^ RELACIONES+ ^ PROBLEMA+ ^ </pattern>
+		<template>
+			<srai>HAY QUE ENTREGAR LOS EJERCICIOS DE LAS RELACIONES DE PROBLEMAS</srai>
+		</template>
+	</category>
+	<category>
+		<pattern>  ^ EJERCICIO+ ^ RELACIONES+ ^ PROBLEMA+ ^ ENTREGAR ^  </pattern>
+		<template>
+			<srai>HAY QUE ENTREGAR LOS EJERCICIOS DE LAS RELACIONES DE PROBLEMAS</srai>
+		</template>
+	</category>
+	<!--Pregunta 13-->
+	<!-- Original -->
+	<category>
+		<pattern>CUANTO VALE EL PRIMER EXAMEN DE TEORIA</pattern>
+		<template>Respuesta pregunta 13</template>
+	</category>
+	<category>
+		<pattern> ^ VALE ^ PRIMER ^ EXAMEN ^ TEORIA ^ </pattern>
+		<template>
+			<srai>CUANTO VALE EL PRIMER EXAMEN DE TEORIA</srai>
+		</template>
+	</category>
+	<category>
+		<pattern> ^ VALE ^ TEORIA ^ PRIMER ^ EXAMEN ^ </pattern>
+		<template>
+			<srai>CUANTO VALE EL PRIMER EXAMEN DE TEORIA</srai>
+		</template>
+	</category>
+	<category>
+		<pattern> ^ TEORIA ^ PRIMER ^ EXAMEN ^ VALE ^ </pattern>
+		<template>
+			<srai>CUANTO VALE EL PRIMER EXAMEN DE TEORIA</srai>
+		</template>
+	</category>
+	<category>
+		<pattern> ^ PRIMER ^ EXAMEN ^ TEORIA  ^ VALE ^ </pattern>
+		<template>
+			<srai>CUANTO VALE EL PRIMER EXAMEN DE TEORIA</srai>
+		</template>
+	</category>
+	<category>
+		<pattern>CUANTO VALE EL PRIMER EXAMEN DE TEORIA</pattern>
+		<template>Respuesta pregunta 13</template>
+	</category>
+	<!--Pregunta 14-->
+	<!-- Original -->
+	<category>
+		<pattern>PUEDO RECUPERAR UNA PRACTICA O EXAMEN</pattern>
+		<template>Respuesta pregunta 14</template>
+	</category>
+	<category>
+		<pattern> ^ RECUPERA+ ^ (PRACTICA) ^ (EXAMEN) ^ </pattern>
+		<template>
+			<srai>PUEDO RECUPERAR UNA PRACTICA O EXAMEN</srai>
+		</template>
+	</category>
+	<category>
+		<pattern> ^ (PRACTICA) ^ (EXAMEN) ^ RECUPERA+ ^  </pattern>
+		<template>
+			<srai>PUEDO RECUPERAR UNA PRACTICA O EXAMEN</srai>
+		</template>
+	</category>
+	<!--Pregunta 15-->
+	<!-- Original -->
+	<category>
+		<pattern>QUE PASA SI ME COPIO DE OTRO ESTUDIANTE</pattern>
+		<template>Respuesta pregunta 15</template>
+	</category>
+	<category>
+		<pattern> ^ ME [COPIO COPIARA] ^ ESTUDIANTE ^ </pattern>
+		<template>
+			<srai>QUE PASA SI ME COPIO DE OTRO ESTUDIANTE</srai>
+		</template>
+	</category>
+	<category>
+		<pattern> ^ ESTUDIANTE ^ ME [COPIO COPIARA]  ^ </pattern>
+		<template>
+			<srai>QUE PASA SI ME COPIO DE OTRO ESTUDIANTE</srai>
+		</template>
+	</category>
+	<!--Pregunta 16-->
+	<!-- Original -->
+	<category>
+		<pattern>QUE PASA SI ME DEJO COPIAR DE OTRO ESTUDIANTE</pattern>
+		<template>Respuesta pregunta 16</template>
+	</category>
+	<category>
+		<pattern> ^ [DEJO DEJARA] ^ [COPIO COPIARA COPIAR]  ^ ESTUDIANTE ^ </pattern>
+		<template>
+			<srai>QUE PASA SI ME DEJO COPIAR DE OTRO ESTUDIANTE</srai>
+		</template>
+	</category>
+	<category>
+		<pattern> ^ ESTUDIANTE ^ [DEJO DEJARA] ^ [COPIO COPIARA COPIAR]  ^ </pattern>
+		<template>
+			<srai>QUE PASA SI ME DEJO COPIAR DE OTRO ESTUDIANTE</srai>
+		</template>
+	</category>
+	<!--Pregunta 17-->
+	<!-- Original -->
+	<category>
+		<pattern>Y SI SUSPENDO EN LA CONVOCATORIA ORDINARIA</pattern>
+		<template>Respuesta pregunta 17</template>
+	</category>
+	<category>
+		<pattern> ^ [SUSPENDO SUSPENDIERA] ^ CONVOCATORIA ORDINARIA  ^ </pattern>
+		<template>
+			<srai>Y SI SUSPENDO EN LA CONVOCATORIA ORDINARIA</srai>
+		</template>
+	</category>
+	<category>
+		<pattern> ^  CONVOCATORIA ORDINARIA  ^ [SUSPENDO SUSPENDIERA] ^ </pattern>
+		<template>
+			<srai>Y SI SUSPENDO EN LA CONVOCATORIA ORDINARIA</srai>
+		</template>
+	</category>
+	<!--Pregunta 18-->
+	<!-- Original -->
+	<category>
+		<pattern>CUANTO VALE LA PRACTICA Y LA TEORIA</pattern>
+		<template>Respuesta pregunta 18</template>
+	</category>
+	<category>
+		<pattern> ^ [SUSPENDO SUSPENDIERA] ^ CONVOCATORIA ORDINARIA  ^ </pattern>
+		<template>
+			<srai>CUANTO VALE LA PRACTICA Y LA TEORIA</srai>
+		</template>
+	</category>
+	<category>
+		<pattern> ^  CONVOCATORIA ORDINARIA  ^ [SUSPENDO SUSPENDIERA] ^ </pattern>
+		<template>
+			<srai>CUANTO VALE LA PRACTICA Y LA TEORIA</srai>
+		</template>
+	</category>
+	<!--Pregunta 19-->
+	<!-- Original -->
+	<category>
+		<pattern>CUAL ES EL HORARIO DE TUTORIAS DEL PROFESOR DE PRACTICAS</pattern>
+		<template>Respuesta pregunta 19</template>
+	</category>
+	<category>
+		<pattern> ^ HORARIO ^ TUTORIAS ^ PROFESOR ^ PRACTICAS ^ </pattern>
+		<template>
+			<srai>CUAL ES EL HORARIO DE TUTORIAS DEL PROFESOR DE PRACTICAS</srai>
+		</template>
+	</category>
+	<category>
+		<pattern> ^  PROFESOR ^ PRACTICAS ^ HORARIO ^ TUTORIAS ^ </pattern>
+		<template>
+			<srai>CUAL ES EL HORARIO DE TUTORIAS DEL PROFESOR DE PRACTICAS</srai>
+		</template>
+	</category>
+	<!--Pregunta 20-->
+	<!-- Original -->
+	<category>
+		<pattern>SE PUEDE APROBAR LA PARTE PRACTICA DE LA ASIGNATURA SI NO PRESENTO UNA PRACTICA</pattern>
+		<template>Respuesta pregunta 20</template>
+	</category>
+	<category>
+		<pattern> ^ PUEDE APROBAR ^ PARTE PRACTICA ^ NO PRESENTO  ^ PRACTICA ^ </pattern>
+		<template>
+			<srai>SE PUEDE APROBAR LA PARTE PRACTICA DE LA ASIGNATURA SI NO PRESENTO UNA PRACTICA</srai>
+		</template>
+	</category>
+	<category>
+		<pattern> ^ PARTE PRACTICA  ^ PUEDE APROBAR ^ NO PRESENTO  ^ PRACTICA ^ </pattern>
+		<template>
+			<srai>SE PUEDE APROBAR LA PARTE PRACTICA DE LA ASIGNATURA SI NO PRESENTO UNA PRACTICA</srai>
+		</template>
+	</category>
+	<category>
+		<pattern> ^ NO PRESENTO  ^ PRACTICA ^ PARTE PRACTICA  ^ PUEDE APROBAR ^ </pattern>
+		<template>
+			<srai>SE PUEDE APROBAR LA PARTE PRACTICA DE LA ASIGNATURA SI NO PRESENTO UNA PRACTICA</srai>
+		</template>
+	</category>
+	<category>
+		<pattern> ^ PRACTICA ^ NO (LA) PRESENTO ^ PARTE PRACTICA ^ PUEDE APROBAR ^ </pattern>
+		<template>
+			<srai>SE PUEDE APROBAR LA PARTE PRACTICA DE LA ASIGNATURA SI NO PRESENTO UNA PRACTICA</srai>
+		</template>
+	</category>
+	<!--Pregunta 21-->
+	<!-- Original -->
+	<category>
+		<pattern>CUAL ES LA NOTA MINIMA QUE TENGO QUE OBTENER EN CADA PARTE PARA HACER MEDIA</pattern>
+		<template>Respuesta pregunta 21</template>
+	</category>
+	<category>
+		<pattern> ^ NOTA MINIMA ^ (CADA) PARTE ^ HACER MEDIA ^ </pattern>
+		<template>
+			<srai>CUAL ES LA NOTA MINIMA QUE TENGO QUE OBTENER EN CADA PARTE PARA HACER MEDIA</srai>
+		</template>
+	</category>
+	<category>
+		<pattern> ^ (CADA) PARTE  ^ NOTA MINIMA ^ HACER MEDIA ^ </pattern>
+		<template>
+			<srai>CUAL ES LA NOTA MINIMA QUE TENGO QUE OBTENER EN CADA PARTE PARA HACER MEDIA</srai>
+		</template>
+	</category>
+	<!--Pregunta 22-->
+	<!-- Original -->
+	<category>
+		<pattern>QUE PUNTUACION OBTENGO EN LA PRACTICA 1 SI OPTO POR DEFENDER EL NIVEL 3 Y NO LO SUPERO</pattern>
+		<template>Respuesta pregunta 22</template>
+	</category>
+	<category>
+		<pattern> ^ PUNTUACION OBTENGO ^ PRACTICA 1 ^ DEFENDER EL NIVEL 3 ^ NO (LO) SUPERO ^ </pattern>
+		<template>
+			<srai>QUE PUNTUACION OBTENGO EN LA PRACTICA 1 SI OPTO POR DEFENDER EL NIVEL 3 Y NO LO SUPERO</srai>
+		</template>
+	</category>
+	<category>
+		<pattern> ^ PRACTICA 1  ^ PUNTUACION OBTENGO ^ DEFENDER EL NIVEL 3 ^ NO (LO) SUPERO ^ </pattern>
+		<template>
+			<srai>QUE PUNTUACION OBTENGO EN LA PRACTICA 1 SI OPTO POR DEFENDER EL NIVEL 3 Y NO LO SUPERO</srai>
+		</template>
+	</category>
+	<!--Pregunta 23-->
+	<!-- Original -->
+	<category>
+		<pattern>PUEDO ENTREGAR LA PRACTICA 1 SIN HACER LA TAREA RELATIVA AL NIVEL 0</pattern>
+		<template>Respuesta pregunta 22</template>
+	</category>
+	<category>
+		<pattern> ^ PUEDO ENTREGAR ^ PRACTICA 1 ^ SIN HACER  ^ NIVEL 0 ^ </pattern>
+		<template>
+			<srai>PUEDO ENTREGAR LA PRACTICA 1 SIN HACER LA TAREA RELATIVA AL NIVEL 0</srai>
+		</template>
+	</category>
+	<category>
+		<pattern> ^ PRACTICA 1  ^ PUEDO ENTREGAR ^ SIN HACER  ^ NIVEL 0 ^ </pattern>
+		<template>
+			<srai>PUEDO ENTREGAR LA PRACTICA 1 SIN HACER LA TAREA RELATIVA AL NIVEL 0</srai>
+		</template>
+	</category>
+	<category>
+		<pattern> ^ SIN HACER  ^ NIVEL 0 ^ PUEDO ENTREGAR ^ PRACTICA 1 ^ </pattern>
+		<template>
+			<srai>PUEDO ENTREGAR LA PRACTICA 1 SIN HACER LA TAREA RELATIVA AL NIVEL 0</srai>
+		</template>
+	</category>
+	<category>
+		<pattern> ^ SIN HACER  ^ NIVEL 0 ^ PRACTICA 1  ^ PUEDO ENTREGAR  ^ </pattern>
+		<template>
+			<srai>PUEDO ENTREGAR LA PRACTICA 1 SIN HACER LA TAREA RELATIVA AL NIVEL 0</srai>
+		</template>
+	</category>
+	<!--Pregunta 24-->
+	<!-- Original -->
+	<category>
+		<pattern>QUE TENGO QUE HACER SI NO PUEDO ASISTIR A LA SESION DE PRACTICAS EN LA QUE ME CORRESPONDE HACER LA DEFENSA DE MI PRACTICA</pattern>
+		<template>Respuesta pregunta 24</template>
+	</category>
+	<category>
+		<pattern> ^ NO (PUEDO) [ASISTIR ASISTO] ^ SESION (DE) PRACTICAS ^ CORRESPONDE ^ DEFENSA ^ PRACTICA ^ </pattern>
+		<template>
+			<srai>QUE TENGO QUE HACER SI NO PUEDO ASISTIR A LA SESION DE PRACTICAS EN LA QUE ME CORRESPONDE HACER LA DEFENSA DE MI PRACTICA</srai>
+		</template>
+	</category>
+	<category>
+		<pattern> ^ DEFENSA ^ PRACTICA ^ NO (PUEDO) [ASISTIR ASISTO] ^ SESION (DE) PRACTICAS ^ CORRESPONDE ^ </pattern>
+		<template>
+			<srai>QUE TENGO QUE HACER SI NO PUEDO ASISTIR A LA SESION DE PRACTICAS EN LA QUE ME CORRESPONDE HACER LA DEFENSA DE MI PRACTICA</srai>
+		</template>
+	</category>
+	<category>
+		<pattern> ^ DEFENSA ^ PRACTICA ^ NO (PUEDO) [ASISTIR ASISTO] ^ SESION (DE) PRACTICAS ^ CORRESPONDE ^ </pattern>
+		<template>
+			<srai>QUE TENGO QUE HACER SI NO PUEDO ASISTIR A LA SESION DE PRACTICAS EN LA QUE ME CORRESPONDE HACER LA DEFENSA DE MI PRACTICA</srai>
+		</template>
 	</category>
 </aiml>

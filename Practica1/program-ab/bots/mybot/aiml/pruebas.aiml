@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+	<category>
+		<pattern>hola</pattern>
+		<template>Hola de nuevo, que tal?</template>
+	</category>
+
+	<category>
+		<pattern>* que tal tu</pattern>
+		<template>Estoy genial!!!</template>
+	</category>
+	
+	<category>
+		<pattern>^ me llamo *</pattern>
+		<template>Que casualidad <star index="2"/> yo tambien tengo nombre, me llamo HALfonso</template>
+	</category>
+	<category>
+		<pattern>^ Mi nombre es *</pattern>
+		<template>Hola <star index="2"/></template>
+	</category>
+</aiml>
