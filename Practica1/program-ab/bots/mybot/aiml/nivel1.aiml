@@ -10,12 +10,12 @@
 				<li>Que tal, Empezamos?</li>
 			</random>
 			<think>
-				<set var="lista_frutas">
+				<set name="lista_frutas">
 					<readset>frutas</readset>
 				</set>
 				<set var="cantidad">
 					<srai>COUNT 
-						<get var="lista_frutas"/>
+						<get name="lista_frutas"/>
 					</srai>
 				</set>
 				<set var="pos">
@@ -26,7 +26,7 @@
 				<set name="elegida">
 					<srai>SELECTITEM 
 						<get var="pos"/> IN 
-						<get var="lista_frutas"/>
+						<get name="lista_frutas"/>
 					</srai>
 				</set>
 				<set name="caracteristicas">
@@ -60,18 +60,18 @@
 					</srai>
 				</set>
 			</think>
+		
 			<condition var="existe">
 				<li value="0"> No</li>
 				<li>Si</li>
 			</condition>
+
 		</template>
 	</category>
 	<!-- Patron de respuestas -->
 	<category>
-		<pattern> (es) (tiene) (es de) (tamaño) (sabor) (color) (vitamina) *</pattern>
+		<pattern> (la fruta) (el fruto) (es) (tiene) (es de) (tamaño) (sabor) (color) (vitamina) *</pattern>
 		<template>
-			<get name="elegida"/>
-			<get name="caracteristicas"/>
 			<think>
 				<set var="existe">
 					<srai>FINDITEM 
