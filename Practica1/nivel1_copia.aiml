@@ -1,0 +1,109 @@
+<!-- -->
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<category>
+		<pattern>INICIO</pattern>
+		<template>
+			<random>
+				<li>Que tal, comenzamos?</li>
+				<li>Empezamos?</li>
+				<li>comenzamos?</li>
+				<li>Que tal, Empezamos?</li>
+			</random>
+			<think>
+				<set name="lista_frutas">
+					<readset>frutas</readset>
+				</set>
+				<set var="cantidad">
+					<srai>COUNT 
+						<get name="lista_frutas"/>
+					</srai>
+				</set>
+				<set var="pos">
+					<srai>RANDOM 
+						<get var="cantidad"/>
+					</srai>
+				</set>
+				<set name="elegida">
+					<srai>SELECTITEM 
+						<get var="pos"/> IN 
+						<get name="lista_frutas"/>
+					</srai>
+				</set>
+				<set name="caracteristicas">
+					<map name="map_caracteristicas">
+						<get name="elegida"/>
+					</map>
+				</set>
+			</think>
+		</template>
+	</category>
+	<category>
+		<pattern>(HOLA) (BUENAS)</pattern>
+		<template>
+			<srai>INICIO</srai>
+		</template>
+	</category>
+	<!-- Patron de ayuda -->
+	<category>
+		<pattern>(el) (la) * (es) (tiene) (es de) (tamaño) (sabor) (color) (vitamina) *</pattern>
+		<template>
+			<think>
+				<set var="peticion">
+					<map name="map_caracteristicas">
+						<star/>
+					</map>
+				</set>
+				<set var="existe">
+					<srai>FINDITEM 
+						<star index="2"/> IN 
+						<get var="peticion"/>
+					</srai>
+				</set>
+			</think>
+		
+			<condition var="existe">
+				<li value="0"> No</li>
+				<li>Si</li>
+			</condition>
+
+		</template>
+	</category>
+	<!-- Patron de respuestas -->
+	<category>
+		<pattern> (la fruta) (el fruto) (es) (tiene) (es de) (tamaño) (sabor) (color) (vitamina) *</pattern>
+		<template>
+			<think>
+				<set var="existe">
+					<srai>FINDITEM 
+						<star index="1"/> IN 
+						<get name="caracteristicas"/>
+					</srai>
+				</set>
+			</think>
+			<condition var="existe">
+				<li value="0"> No</li>
+				<li>Si</li>
+			</condition>
+		</template>
+	</category>
+	<!--Patron solucion 	-->
+	<category>
+		<pattern>(La fruta en la que estabas pensando)  (es la) (es el) *</pattern>
+		<template>
+			<think>
+				<set var="existe">
+					<srai>FINDITEM 
+						<star index="1"/> IN 
+						<get name="elegida"/>
+					</srai>
+				</set>
+			</think>
+			<condition var="existe">
+				<li value="0"> No</li>
+				<li>Si</li>
+			</condition>
+		</template>
+	</category>
+</aiml>
+
