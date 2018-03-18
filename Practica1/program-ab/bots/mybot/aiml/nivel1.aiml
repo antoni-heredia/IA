@@ -2,24 +2,35 @@
 <aiml version="2.0">
 	<category>
 		<pattern> ^ hola ^</pattern>
-		<template>Vamos a jugar Quien quieres que le toque adivinar la maquina o el humano</template>
+		<template>Vamos a jugar Quien quieres que le toque adivinar la maquina o el humano o prefieres la guia docente</template>
+	</category>
+	<category>
+		<pattern> ^ empezar (nuevo)^</pattern>
+		<template>
+		<srai>HOLA</srai>
+		</template>
 	</category>
 	<category>
 		<pattern>(el) (la) *</pattern>
-		<that>Vamos a jugar Quien quieres que le toque adivinar la maquina o el humano</that>
-		<template>De acuerdo adivinara: <set name="topic"> <star/> </set>. Cuando estes listo di: comenzar</template>
-	</category>
-	<topic name="MAQUINA">
+		<that>Vamos a jugar Quien quieres que le toque adivinar la maquina o el humano o prefieres la guia docente</that>
 		
+		<template>
+			<think>
+				<set name="topic"> <star/> </set>
+				<set var="eleccion_juego"> <star/></set>
+			</think>
+			<condition var="eleccion_juego">
+				<li value="GUIA DOCENTE"> Hazme preguntas sobre la guia docente:</li>
+				<li>De acuerdo vamos le toca adivinar a: <star/>. Preguntame sobre las frutas.
+					<srai>COMENZAR</srai>
+				</li>
+			</condition>
+		</template>
+	</category>
+	<topic name="HUMANO">
 		<category>
-			<pattern>comenzar</pattern>
+			<pattern>COMENZAR</pattern>
 			<template>
-				<random>
-					<li>Que tal, comenzamos? Preguntame sobre las frutas.</li>
-					<li>Empezamos? Preguntame sobre las frutas.</li>
-					<li>comenzamos? Preguntame sobre las frutas.</li>
-					<li>Que tal, Empezamos? Preguntame sobre las frutas.</li>
-				</random>
 				<think>
 					<set name="lista_frutas">
 						<readset>frutas</readset>
@@ -78,7 +89,6 @@
 		<category>
 			<pattern> (la fruta) (el fruto) (es) (tiene) (es de) (tamaño) (sabor) (color) (vitamina) *</pattern>
 			<template>
-										<get name="caracteristicas"/>
 
 				<think>
 					<set var="existe">
@@ -112,9 +122,5 @@
 				</condition>
 			</template>
 		</category>
-	</topic>
-	
-	<topic name="HUMANO">
-	
 	</topic>
 </aiml>

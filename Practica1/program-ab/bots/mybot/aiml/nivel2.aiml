@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<topic name="MAQUINA">
+		<category>
+			<pattern>^</pattern>
+			<template>No conozco ese comando</template>
+		</category>
+		<category>
+			<pattern>COMENZAR</pattern>
+			<template>
+				<think>
+					<set name="caracteristicasdisponibles">roja semiacida pequeña amarilla verde morada mediana naranja acida grande dulce marron neutra a b c</set>
+					<set name="lista_frutas"><readset>frutas</readset></set>
+					<set name="todas_frutas"><readset>frutas</readset></set>
+
+					<set name="caracteristicasactales"></set>
+					<set name="posDisponibles">1</set>
+					<!-- 
+					<set name="elegida"><srai>SELECTITEM 
+							<get name="posDisponibles"/> IN 
+							<get name="lista_frutas"/></srai></set><set name="caracteristicasElegida"><map name="map_caracteristicas2"><get name="elegida"/></map></set>
+					-->
+					<set name="pregunta">
+						<srai>SELECTITEM <get name="posDisponibles"/> IN <get name="caracteristicasdisponibles"/></srai>
+					</set>
+				</think>La fruta es <get name="pregunta"/>?
+									
+			</template>
+		</category>
+		<category>
+			<pattern>^ si ^</pattern>
+			<template>
+				<think>
+					<set name="caracteristicasactales"><get name="pregunta"/> <get name="caracteristicasactales"/></set>
+					<srai>COMPROBARSI</srai>
+				</think>
+				<srai>PREGUNTAR</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>^ no ^</pattern>
+			<template>
+				<think>
+					<srai>COMPROBARNO</srai>
+				</think>
+				<srai>PREGUNTAR</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>PREGUNTAR</pattern>
+			<template>
+				<think>
+					<set name="posDisponibles"><map name="successor"><get name="posDisponibles"/></map></set>
+					<set name="pregunta">
+						<srai>SELECTITEM <get name="posDisponibles"/> IN <get name="caracteristicasdisponibles"/></srai>
+					</set>
+
+					<set var="cuantasQuedan">
+						<srai>COUNT 
+							<get name="lista_frutas"/>
+						</srai>
+					</set>
+				</think>
+				quedan:<get var="cuantasQuedan"/>
+				<condition var="cuantasQuedan">
+					<li value="0">No hay frutas con esas caracteristicas. Volvemos a empezar, piensa en otra fruta.
+						<srai>COMENZAR</srai></li>
+					<li value ="1">
+						La fruta es: <get name="lista_frutas"/>
+						Vamos a por otra partida, piensa en otra fruta.
+						<srai>COMENZAR</srai>
+					</li>
+					<li>
+						La fruta es <get name="pregunta"/>?
+					</li>
+				</condition>
+
+			</template>
+		</category>
+
+		<category>
+			<pattern>COMPROBARNO</pattern>
+			<template>
+				<think>
+					<set var="cantidad">
+						<srai>COUNT 
+							<get name="lista_frutas"/>
+						</srai>
+					</set>
+					<set var="cantidad">
+						<map name="successor"><get var="cantidad"/></map>
+					</set>
+					<set var="contador">1</set>
+					<condition var="contador">
+						<li><value><get var="cantidad"/></value></li>
+						<li>
+												<get var="contador"/>
+
+							<!-- Cogemos la fruta que vamos a comprobar-->
+								<set var="comprobando">
+									<srai>SELECTITEM <get var="contador"/> IN <get name="todas_frutas"/></srai>
+								</set>
+								<!--Cogemos las caracteristicas de la fruta a comprobar-->
+								<set var="caracteristicascomprobando">
+									<map name="map_caracteristicas2">
+										<get var="comprobando"/>
+									</map>
+								</set>
+
+								<set var="existe">
+									<srai>
+										FINDITEM <get name="pregunta"/> IN <get var="caracteristicascomprobando"/>
+									</srai>
+								</set>
+
+								<condition var="existe">
+									<li value="0"></li>
+									<li>
+										<set var="pos">
+											<srai>FINDITEM <get var="comprobando"/> IN <get name="lista_frutas"/></srai>
+										</set>
+										<set name="lista_frutas">
+											<srai>REMOVEITEM <get var="pos"/> IN <get name="lista_frutas"/></srai>
+										</set>
+									</li>
+								</condition>
+
+								<set var="contador">
+									<map name="successor"><get var="contador"/></map>
+								</set>
+							<loop/>
+						</li>
+					</condition>
+					<set name="todas_frutas"><get name="lista_frutas"/></set>
+				</think>
+			</template>
+		</category>
+
+
+		<category>
+			<pattern>COMPROBARSI</pattern>
+			<template>
+				<think>
+					<set var="cantidad">
+						<srai>
+							COUNT <get name="lista_frutas"/>
+						</srai>
+					</set>
+					<set var="cantidad">
+						<map name="successor"><get var="cantidad"/></map>
+					</set>
+					<set var="contador">1</set>
+					<condition var="contador">
+						<li><value><get var="cantidad"/></value></li>
+						<li>
+							<!-- Cogemos la fruta que vamos a comprobar-->
+							<think>
+								<set var="comprobando">
+									<srai>SELECTITEM <get var="contador"/> IN <get name="todas_frutas"/></srai>
+								</set>
+								<!--Cogemos las caracteristicas de la fruta a comprobar-->
+								<set var="caracteristicascomprobando">
+									<map name="map_caracteristicas2">
+										<get var="comprobando"/>
+									</map>
+								</set>
+
+								<set var="existe">
+									<srai>
+										FINDITEM <get name="pregunta"/> IN <get var="caracteristicascomprobando"/>
+									</srai>
+								</set>
+
+								<condition var="existe">
+									<li value="0"> 
+										<set var="pos">
+											<srai>FINDITEM <get var="comprobando"/> IN <get name="lista_frutas"/></srai>
+										</set>
+										<set name="lista_frutas">
+											<srai>
+												REMOVEITEM <get var="pos"/> IN <get name="lista_frutas"/>
+											</srai>
+										</set>
+									</li>
+								</condition>
+
+								<set var="contador">
+									<map name="successor"><get var="contador"/></map>
+								</set>
+							</think>
+							<loop/>
+						</li>
+					</condition>
+					<set name="todas_frutas"><get name="lista_frutas"/></set>
+				</think>
+			</template>
+		</category>
+	</topic>
+</aiml>

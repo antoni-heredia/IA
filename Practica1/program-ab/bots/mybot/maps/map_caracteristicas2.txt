@@ -1,0 +1,16 @@
+Fresa: roja semiacida pequeña b c
+Manzana: amarilla roja verde semiacida mediana b c
+Naranja:naranja acida mediana b c
+Kiwi:verde amarilla acida pequeña c
+Mandarina:naranja acida pequeña a
+Piña:amarilla verde acida grande b c
+Mango:verde semiacida grande a b c
+Melocoton:amarilla naranja semiacida mediana a b
+Higo:verde morada dulce pequeña b c
+Ciruela:amarilla morada dulce pequeña a b c
+Pera: verde amarilla dulce mediana b c
+Platano:amarilla dulce mediana b c
+Coco:marron neutra grande b c
+Aguacate:verde neutra mediana b c
+Nuez:marron neutra pequeña b
+Cereza:roja semiacida pequeña a c

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
+	<topic name="GUIA DOCENTE">
 	<!--Pregunta 1 -->
 	<!-- Original -->
 	<category>
 		<pattern>COMO CONSIGO SUPERAR LA PARTE PRACTICA</pattern>
-		<template>Respuesta pregunta 1</template>
+		<template>Habra que sacar mas de un 3/10</template>
 	</category>
 	<category>
 		<pattern> ^ SUPERAR ^ PARTE PRACTICA ^</pattern>
@@ -34,7 +35,7 @@
 	<!-- Original -->
 	<category>
 		<pattern>COMO SE EVALUA EN LA CONVOCATORIA ORDINARIA</pattern>
-		<template>Respuesta pregunta 2</template>
+		<template>Para la parte de teoría durante el curso se realizarán dos pruebas. La nota de teoría será la media sobre las dos pruebas.Para la parte de prácticas se tendrá en cuenta la asistencia y participación en las clases (esta parte constituye el 10% de la nota de prácticas), y adicionalmente se realizarán tres prácticas y un examen de problemas. Este último se realizará conjuntamente con el examen final de teoría. La nota será la media de estas cuatro pruebas (esta parte constituye el 90% de la nota de prácticas). </template>
 	</category>
 	<category>
 		<pattern> ^ EVALUA ^ CONVOCATORIA ORDINARIA ^</pattern>
@@ -64,7 +65,7 @@
 	<!-- Original -->
 	<category>
 		<pattern>HAY EXAMEN DE PRACTICAS EN LA CONVOCATORIA EXTRAORDINARIA</pattern>
-		<template>Respuesta pregunta 3</template>
+		<template>Hay un examen unico que incluye preguntas de teoria y de practicas</template>
 	</category>
 	<category>
 		<pattern> ^ HAY ^ EXAMEN ^ PRACTICAS ^ CONVOCATORIA EXTRAORDINARIA ^</pattern>
@@ -94,7 +95,7 @@
 	<!-- Original -->
 	<category>
 		<pattern>QUE PASA SI NO PUEDO ASISTIR A CLASE REGULARMENTE</pattern>
-		<template>Respuesta pregunta 4</template>
+		<template>Deberias pedir la evaluacion unica final</template>
 	</category>
 	<category>
 		<pattern> ^ NO PUEDO ASISTIR ^  CLASE ^</pattern>
@@ -124,7 +125,7 @@
 	<!-- Original -->
 	<category>
 		<pattern>HAY NOTA MINIMA PARA APROBAR</pattern>
-		<template>Respuesta pregunta 5</template>
+		<template>La nota minima es un 5 entre la media de las dos partes. Ademas de tener que sacar minimo un 3/10 en cada parte.</template>
 	</category>
 	<category>
 		<pattern> ^ NOTA MINIMA ^ APROBAR ^ </pattern>
@@ -142,7 +143,7 @@
 	<!-- Original -->
 	<category>
 		<pattern>LAS PRACTICAS SON OBLIGATORIAS</pattern>
-		<template>Respuesta pregunta 6</template>
+		<template>En principio no lo son. Siempre y cuando se llegue al minimo con las demas practicas.(no aparece explicito en la guia docente)</template>
 	</category>
 	<category>
 		<pattern> ^ PRACTICAS ^ OBLIGATORIAS ^ </pattern>
@@ -160,7 +161,7 @@
 	<!-- Original -->
 	<category>
 		<pattern>CUANTO VALE CADA PRACTICA CON RESPECTO A LA NOTA FINAL</pattern>
-		<template>Respuesta pregunta 7</template>
+		<template>La media de las 3 practicas mas el examen es el 90% de la parte de practicas. Por tanto como maximo cada practica valdra 1.125 de la nota final. </template>
 	</category>
 	<category>
 		<pattern> ^ PRACTICA+ ^ CUANTO VALE+ ^ NOTA FINAL ^ </pattern>
@@ -184,7 +185,7 @@
 	<!-- Original -->
 	<category>
 		<pattern>CUANTO VALE LA PARTICIPACION CON RESPECTO A LA NOTA FINAL</pattern>
-		<template>Respuesta pregunta 8</template>
+		<template>Un 10%</template>
 	</category>
 	<category>
 		<pattern> ^ PARTICIPACION+ ^ CUANTO VALE+ ^ NOTA FINAL ^ </pattern>
@@ -208,7 +209,7 @@
 	<!-- Original -->
 	<category>
 		<pattern>COMO SE CONSIGUEN PUNTOS POR PARTICIPACION</pattern>
-		<template>Respuesta pregunta 9</template>
+		<template>Con la asistencia y con la entrega de ejercicios</template>
 	</category>
 	<category>
 		<pattern> ^ CONSIGUEN+ ^ PUNTOS ^ PARTICIPACION ^ </pattern>
@@ -232,7 +233,7 @@
 	<!-- Original -->
 	<category>
 		<pattern>LOS TRABAJOS SON INDIVIDUALES</pattern>
-		<template>Respuesta pregunta 10</template>
+		<template>Si</template>
 	</category>
 	<category>
 		<pattern> ^ TRABAJO+ ^ [INDIVIDUALES INDIVIDUAL] ^ </pattern>
@@ -250,7 +251,7 @@
 	<!-- Original -->
 	<category>
 		<pattern>SE PUEDEN HACER LOS TRABAJOS EN GRUPO</pattern>
-		<template>Respuesta pregunta 11</template>
+		<template>No</template>
 	</category>
 	<category>
 		<pattern> ^ TRABAJO+ ^ GRUPO+ ^ </pattern>
@@ -280,7 +281,7 @@
 	<!-- Original -->
 	<category>
 		<pattern>HAY QUE ENTREGAR LOS EJERCICIOS DE LAS RELACIONES DE PROBLEMAS</pattern>
-		<template>Respuesta pregunta 12</template>
+		<template>No es necesario entregarlos</template>
 	</category>
 	<category>
 		<pattern> ^ ENTREGAR ^ EJERCICIO+ ^ RELACIONES+ ^ PROBLEMA+ ^ </pattern>
@@ -289,7 +290,7 @@
 		</template>
 	</category>
 	<category>
-		<pattern>  ^ EJERCICIO+ ^ RELACIONES+ ^ PROBLEMA+ ^ ENTREGAR ^  </pattern>
+		<pattern>  ^ EJERCICIO+ ^ RELACIONES+ ^ PROBLEMA+ ^ [ENTREGAR entregan] ^  </pattern>
 		<template>
 			<srai>HAY QUE ENTREGAR LOS EJERCICIOS DE LAS RELACIONES DE PROBLEMAS</srai>
 		</template>
@@ -298,7 +299,7 @@
 	<!-- Original -->
 	<category>
 		<pattern>CUANTO VALE EL PRIMER EXAMEN DE TEORIA</pattern>
-		<template>Respuesta pregunta 13</template>
+		<template>Segun la guia docente la nota de teoria es el 50% y esta se calcula con la media de dos examenes. Por lo tanto un 2.5 sobre el final.</template>
 	</category>
 	<category>
 		<pattern> ^ VALE ^ PRIMER ^ EXAMEN ^ TEORIA ^ </pattern>
@@ -324,15 +325,12 @@
 			<srai>CUANTO VALE EL PRIMER EXAMEN DE TEORIA</srai>
 		</template>
 	</category>
-	<category>
-		<pattern>CUANTO VALE EL PRIMER EXAMEN DE TEORIA</pattern>
-		<template>Respuesta pregunta 13</template>
-	</category>
+
 	<!--Pregunta 14-->
 	<!-- Original -->
 	<category>
 		<pattern>PUEDO RECUPERAR UNA PRACTICA O EXAMEN</pattern>
-		<template>Respuesta pregunta 14</template>
+		<template>En principio no. Salvo con una justificacion de causa mayor.</template>
 	</category>
 	<category>
 		<pattern> ^ RECUPERA+ ^ (PRACTICA) ^ (EXAMEN) ^ </pattern>
@@ -350,7 +348,7 @@
 	<!-- Original -->
 	<category>
 		<pattern>QUE PASA SI ME COPIO DE OTRO ESTUDIANTE</pattern>
-		<template>Respuesta pregunta 15</template>
+		<template>Suspendereis tanto tu como el.</template>
 	</category>
 	<category>
 		<pattern> ^ ME [COPIO COPIARA] ^ ESTUDIANTE ^ </pattern>
@@ -368,7 +366,7 @@
 	<!-- Original -->
 	<category>
 		<pattern>QUE PASA SI ME DEJO COPIAR DE OTRO ESTUDIANTE</pattern>
-		<template>Respuesta pregunta 16</template>
+		<template>Suspenderas tanto tu como el otro estudiante</template>
 	</category>
 	<category>
 		<pattern> ^ [DEJO DEJARA] ^ [COPIO COPIARA COPIAR]  ^ ESTUDIANTE ^ </pattern>
@@ -386,7 +384,7 @@
 	<!-- Original -->
 	<category>
 		<pattern>Y SI SUSPENDO EN LA CONVOCATORIA ORDINARIA</pattern>
-		<template>Respuesta pregunta 17</template>
+		<template>Tienes la oportunidad de recuperar la asignatura en la convocatoria extraordinaria</template>
 	</category>
 	<category>
 		<pattern> ^ [SUSPENDO SUSPENDIERA] ^ CONVOCATORIA ORDINARIA  ^ </pattern>
@@ -404,16 +402,16 @@
 	<!-- Original -->
 	<category>
 		<pattern>CUANTO VALE LA PRACTICA Y LA TEORIA</pattern>
-		<template>Respuesta pregunta 18</template>
+		<template>El 50% cada parte.</template>
 	</category>
 	<category>
-		<pattern> ^ [SUSPENDO SUSPENDIERA] ^ CONVOCATORIA ORDINARIA  ^ </pattern>
+		<pattern> ^ VALE ^ [PRACTICA TEORIA] ^ [PRACTICA TEORIA] ^ </pattern>
 		<template>
 			<srai>CUANTO VALE LA PRACTICA Y LA TEORIA</srai>
 		</template>
 	</category>
 	<category>
-		<pattern> ^  CONVOCATORIA ORDINARIA  ^ [SUSPENDO SUSPENDIERA] ^ </pattern>
+		<pattern> ^ [PRACTICA TEORIA] ^ [PRACTICA TEORIA] ^ VALE   ^ </pattern>
 		<template>
 			<srai>CUANTO VALE LA PRACTICA Y LA TEORIA</srai>
 		</template>
@@ -422,7 +420,7 @@
 	<!-- Original -->
 	<category>
 		<pattern>CUAL ES EL HORARIO DE TUTORIAS DEL PROFESOR DE PRACTICAS</pattern>
-		<template>Respuesta pregunta 19</template>
+		<template>Miércoles de 17:30 a 18:30 en ND (ETSIIT) / Jueves de 09:00 a 13:00 en M2 (FCiencia) / Jueves de 16:30 a 17:30 en ND (ETSIIT)</template>
 	</category>
 	<category>
 		<pattern> ^ HORARIO ^ TUTORIAS ^ PROFESOR ^ PRACTICAS ^ </pattern>
@@ -440,7 +438,7 @@
 	<!-- Original -->
 	<category>
 		<pattern>SE PUEDE APROBAR LA PARTE PRACTICA DE LA ASIGNATURA SI NO PRESENTO UNA PRACTICA</pattern>
-		<template>Respuesta pregunta 20</template>
+		<template>Se podria aprobar siempre y cuando se llegue al minimo requerido</template>
 	</category>
 	<category>
 		<pattern> ^ PUEDE APROBAR ^ PARTE PRACTICA ^ NO PRESENTO  ^ PRACTICA ^ </pattern>
@@ -461,6 +459,12 @@
 		</template>
 	</category>
 	<category>
+		<pattern> ^ NO PRESENTO  ^ PRACTICA ^ PUEDO APROBAR ^ PARTE PRACTICA ^ </pattern>
+		<template>
+			<srai>SE PUEDE APROBAR LA PARTE PRACTICA DE LA ASIGNATURA SI NO PRESENTO UNA PRACTICA</srai>
+		</template>
+	</category>
+	<category>
 		<pattern> ^ PRACTICA ^ NO (LA) PRESENTO ^ PARTE PRACTICA ^ PUEDE APROBAR ^ </pattern>
 		<template>
 			<srai>SE PUEDE APROBAR LA PARTE PRACTICA DE LA ASIGNATURA SI NO PRESENTO UNA PRACTICA</srai>
@@ -470,7 +474,7 @@
 	<!-- Original -->
 	<category>
 		<pattern>CUAL ES LA NOTA MINIMA QUE TENGO QUE OBTENER EN CADA PARTE PARA HACER MEDIA</pattern>
-		<template>Respuesta pregunta 21</template>
+		<template>Un 3/10 tanto en teoria como en practicas.</template>
 	</category>
 	<category>
 		<pattern> ^ NOTA MINIMA ^ (CADA) PARTE ^ HACER MEDIA ^ </pattern>
@@ -488,7 +492,7 @@
 	<!-- Original -->
 	<category>
 		<pattern>QUE PUNTUACION OBTENGO EN LA PRACTICA 1 SI OPTO POR DEFENDER EL NIVEL 3 Y NO LO SUPERO</pattern>
-		<template>Respuesta pregunta 22</template>
+		<template>Un 8 sobre 10 siempre que hayas superado el nivel 2 anteriormente</template>
 	</category>
 	<category>
 		<pattern> ^ PUNTUACION OBTENGO ^ PRACTICA 1 ^ DEFENDER EL NIVEL 3 ^ NO (LO) SUPERO ^ </pattern>
@@ -506,7 +510,7 @@
 	<!-- Original -->
 	<category>
 		<pattern>PUEDO ENTREGAR LA PRACTICA 1 SIN HACER LA TAREA RELATIVA AL NIVEL 0</pattern>
-		<template>Respuesta pregunta 22</template>
+		<template>No, ya que es parte indispensable de esa practica.</template>
 	</category>
 	<category>
 		<pattern> ^ PUEDO ENTREGAR ^ PRACTICA 1 ^ SIN HACER  ^ NIVEL 0 ^ </pattern>
@@ -536,7 +540,7 @@
 	<!-- Original -->
 	<category>
 		<pattern>QUE TENGO QUE HACER SI NO PUEDO ASISTIR A LA SESION DE PRACTICAS EN LA QUE ME CORRESPONDE HACER LA DEFENSA DE MI PRACTICA</pattern>
-		<template>Respuesta pregunta 24</template>
+		<template>Puedes intentar acordar otra defensa con tu profesor de practicas siempre que se avise con atelacion.</template>
 	</category>
 	<category>
 		<pattern> ^ NO (PUEDO) [ASISTIR ASISTO] ^ SESION (DE) PRACTICAS ^ CORRESPONDE ^ DEFENSA ^ PRACTICA ^ </pattern>
@@ -556,4 +560,122 @@
 			<srai>QUE TENGO QUE HACER SI NO PUEDO ASISTIR A LA SESION DE PRACTICAS EN LA QUE ME CORRESPONDE HACER LA DEFENSA DE MI PRACTICA</srai>
 		</template>
 	</category>
+
+	<!--Pregunta 25-->
+	<!-- Original -->
+	<category>
+		<pattern>CUANTAS PRUEBAS TEORICAS TENDRE A LO LARGO DEL CURSO</pattern>
+		<template>En la parte de teoria habra 2 examenes a lo largo del curso</template>
+	</category>
+	<category> 
+		<pattern> ^ [CUANTAS CANTIDAD] ^ (PRUEBAS) TEORICA+ ^ (DURANTE) ^ CURSO ^</pattern>
+		<template>
+			<srai>CUANTAS PRUEBAS TEORICAS TENDRE A LO LARGO DEL CURSO</srai>
+		</template>
+	</category>
+	<category>
+		<pattern> ^ (DURANTE) ^ CURSO [CUANTAS CANTIDAD] ^ (PRUEBAS) TEORICA+ ^</pattern>
+		<template>
+			<srai>CUANTAS PRUEBAS TEORICAS TENDRE A LO LARGO DEL CURSO</srai>
+		</template>
+	</category>
+	
+	<!--Pregunta 26-->
+	<!-- Original -->
+	<category>
+		<pattern>QUE VALE LA PRIMERA PRUEBA TEORICA</pattern>
+		<template>Es el 50% de la nota de teoria. Por lo tanto 2.5 puntos.</template>
+	</category>
+	<category> 
+		<pattern> ^ (CUANTO) VALE ^ PRIMERA ^ (PRUEBA) ^ TEORICA ^</pattern>
+		<template>
+			<srai>QUE VALE LA PRIMERA PRUEBA TEORICA</srai>
+		</template>
+	</category>
+	<category>
+		<pattern>^ PRIMERA ^ (PRUEBA) ^ TEORICA  ^</pattern>
+		<template>
+			<srai>QUE VALE LA PRIMERA PRUEBA TEORICA</srai>
+		</template>
+	</category>
+	<!--Pregunta 27-->
+	<!-- Original -->
+	<category>
+		<pattern>EN QUE CONSISTE EL EXAMEN DE EJERCICIOS</pattern>
+		<template>Aunque no aparece explicito en la guia docente. Debe constar de ejercicios parecidos a los de la relacion de ejercicios.</template>
+	</category>
+	<category> 
+		<pattern> ^ CONSISTE ^ EXAMEN  ^ EJERCICIOS ^</pattern>
+		<template>
+			<srai>EN QUE CONSISTE EL EXAMEN DE EJERCICIOS</srai>
+		</template>
+	</category>
+	<category>
+		<pattern> ^ EXAMEN  ^ EJERCICIOS ^ CONSISTE ^</pattern>
+		<template>
+			<srai>QEN QUE CONSISTE EL EXAMEN DE EJERCICIOS</srai>
+		</template>
+	</category>
+	<!--Pregunta 28-->
+	<!-- Original -->
+	<category>
+		<pattern>QUE DEBERIA HACER SI NO ESTOY SEGURO DE PODER SUPERAR EL NIVEL 3 DE LA PRACTICA 1</pattern>
+		<template>Debes intentar hacer primero el nivel 2 y una vez que lo tengas intentar el 3.</template>
+	</category>
+	<category> 
+		<pattern> ^ (DEBERIA) HACER ^ NO ^ SUPERAR ^ NIVEL 3 ^ PRACTICA 1 ^</pattern>
+		<template>
+			<srai>QUE DEBERÍA HACER SI NO ESTOY SEGURO DE PODER SUPERAR EL NIVEL 3 DE LA PRACTICA 1</srai>
+		</template>
+	</category>
+	<category>
+		<pattern> ^ NO ^ SUPERAR ^ NIVEL 3 ^ PRACTICA 1 ^ (DEBERIA) HACER ^</pattern>
+		<template>
+			<srai>QUE DEBERIA HACER SI NO ESTOY SEGURO DE PODER SUPERAR EL NIVEL 3 DE LA PRACTICA 1</srai>
+		</template>
+	</category>
+	<!--Pregunta 29-->
+	<!-- Original -->
+	<category>
+		<pattern>YO PROGRAMO MUY BIEN EN C++, PODRIA HACER LA PRACTICA 1 EN ESE LENGUAJE</pattern>
+		<template>Pues te jodes. C++ mola mas pero esta practica se realiza en AIML.</template>
+	</category>
+	<category> 
+		<pattern> ^ [programo programar] ^ (BIEN) en C++ ^ HACER ^ PRACTICA 1 ^ LENGUAJE ^ </pattern>
+		<template>
+			<srai>YO PROGRAMO MUY BIEN EN C++, PODRIA HACER LA PRACTICA 1 EN ESE LENGUAJE</srai>
+		</template>
+	</category>
+	<category>
+		<pattern> ^ HACER ^ PRACTICA 1  ^  en C++ ^  [programo programar] ^ LENGUAJE ^ </pattern>
+		<template>
+			<srai>YO PROGRAMO MUY BIEN EN C++, PODRIA HACER LA PRACTICA 1 EN ESE LENGUAJE</srai>
+		</template>
+	</category>
+	<!--Pregunta 30-->
+	<!-- Original -->
+	<category>
+		<pattern>ME ENCANTAN LOS AGENTES CONVERSACIONALES Y SOY UN EXPERTO EN SU CONSTRUCCIÓN PODRIA USAR UN AGENTE CONVERSACIONAL PARA QUE VAYAN EN MI LUGAR A HACER LA DEFENSA DE PRACTICAS</pattern>
+		<template>No, debes ser tu el que defienda tu practica. Aunque si haces un Agente CONVERSACIONAL que defienda la practica te deberian poner MH.</template>
+	</category>
+	<category> 
+		<pattern>^ ENCANTAN ^ AGENTES CONVERSACIONALES ^ EXPERTO ^ CONSTRUCCIÓN ^ USAR ^ (AGENTE CONVERSACIONAL) ^ VAYA+ ^ HACER ^</pattern>
+		<template>
+			<srai>ME ENCANTAN LOS AGENTES CONVERSACIONALES Y SOY UN EXPERTO EN SU CONSTRUCCIÓN PODRIA USAR UN AGENTE CONVERSACIONAL PARA QUE VAYAN EN MI LUGAR A HACER LA DEFENSA DE PRACTICAS</srai>
+		</template>
+	</category>
+	<category>
+		<pattern>^ USAR ^ (AGENTE CONVERSACIONAL) ^ VAYA+ ^ HACER ^ ENCANTAN ^ AGENTES CONVERSACIONALES ^ EXPERTO ^ CONSTRUCCIÓN ^</pattern>
+		<template>
+			<srai>ME ENCANTAN LOS AGENTES CONVERSACIONALES Y SOY UN EXPERTO EN SU CONSTRUCCIÓN PODRIA USAR UN AGENTE CONVERSACIONAL PARA QUE VAYAN EN MI LUGAR A HACER LA DEFENSA DE PRACTICAS</srai>
+		</template>
+	</category>
+	<category>
+		<pattern>^ USAR ^ AGENTE CONVERSACIONAL ^ VAYA+ ^ HACER ^</pattern>
+		<template>
+			<srai>ME ENCANTAN LOS AGENTES CONVERSACIONALES Y SOY UN EXPERTO EN SU CONSTRUCCIÓN PODRIA USAR UN AGENTE CONVERSACIONAL PARA QUE VAYAN EN MI LUGAR A HACER LA DEFENSA DE PRACTICAS</srai>
+		</template>
+	</category>
+</topic>
+	
 </aiml>

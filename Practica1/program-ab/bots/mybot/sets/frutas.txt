@@ -5,11 +5,11 @@ Kiwi
 Mandarina 
 Piña 
 Mango
-Melocotón 
+melocoton 
 Higo
 Ciruela
 Pera 
-Plátano
+Platano
 Coco
 Aguacate
 Nuez

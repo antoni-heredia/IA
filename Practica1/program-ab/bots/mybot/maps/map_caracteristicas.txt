@@ -5,7 +5,7 @@ Kiwi:verde amarillo amarilla acido acida pequeño pequeña c
 Mandarina:naranja acido acida pequeño pequeña a
 Piña:amarillo amarilla verde acido acida grande b c
 Mango:verde semiacido semiacida grande a b c
-Melocotón:amarillo amarilla naranja semiacido semiacida mediano mediana a b
+Melocoton:amarillo amarilla naranja semiacido semiacida mediano mediana a b
 Higo:verde morado morada dulce pequeño pequeña b c
 Ciruela:amarillo amarilla morado morada dulce pequeño pequeña a b c
 Pera: verde amarillo amarilla dulce mediano mediana b c
