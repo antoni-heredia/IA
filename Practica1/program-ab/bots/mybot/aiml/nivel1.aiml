@@ -21,7 +21,7 @@
 			</think>
 			<condition var="eleccion_juego">
 				<li value="GUIA DOCENTE"> Hazme preguntas sobre la guia docente:</li>
-				<li>De acuerdo vamos le toca adivinar a: <star/>. Preguntame sobre las frutas.
+				<li>De acuerdo vamos le toca adivinar a: <star/>.
 					<srai>COMENZAR</srai>
 				</li>
 			</condition>
@@ -31,6 +31,7 @@
 		<category>
 			<pattern>COMENZAR</pattern>
 			<template>
+				Preguntame sobre la fruta.
 				<think>
 					<set name="lista_frutas">
 						<readset>frutas</readset>
@@ -118,9 +119,17 @@
 				</think>
 				<condition var="existe">
 					<li value="0"> No</li>
-					<li>Si</li>
+					<li>Si.Quieres jugar de nuevo?</li>
 				</condition>
 			</template>
+		</category>
+		<category>
+			<pattern>si</pattern>
+			<template><srai>COMENZAR</srai></template>
+		</category>
+		<category>
+			<pattern>No</pattern>
+			<template>Si quieres empezar de nuevo di: empezar de nuevo.</template>
 		</category>
 	</topic>
 </aiml>
