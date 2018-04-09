@@ -60,10 +60,72 @@ AnularMatriz(mapaConPlan);
 
 bool ComportamientoJugador::pathFinding(const estado & origen, const estado & destino, list < Action >  & plan) {
 	
-	vector < vector < double >  > mapaPotencial = calcularPotencialMapa(destino); 
-return true; 
+	queue <Action> colaAcciones;
+	bool visitados[100][100] = {false};
+	queue <estado> colaEstados;
+	colaEstados.push(origen);
+	visitados[origen.fila][origen.columna] = true;
+	while(!colaEstados.empty()){
+		estado v = colaEstados.front();
+		colaEstados.pop();
+		if(v == destino){
+			return true;
+		}
+		estado eInsertar;
+		if(!visitados[v.fila][v.columna-1] && puedeAvanzar(v.fila,v.columna-1)){
+			visitados[v.fila][v.columna-1] = true;
+			eInsertar.fila = v.fila;
+			eInsertar.columna = v.columna-1;
+			colaEstados.push(eInsertar);
+		}else if (!visitados[v.fila-1][v.columna] && puedeAvanzar(v.fila-1,v.columna)){
+			visitados[v.fila-1][v.columna] = true;
+			eInsertar.fila = v.fila-1;
+			eInsertar.columna = v.columna;
+			colaEstados.push(eInsertar);
+
+		}else if (!visitados[v.fila][v.columna+1] && puedeAvanzar(v.fila,v.columna+1)){
+			visitados[v.fila][v.columna+1] = true;
+			eInsertar.fila = v.fila;
+			eInsertar.columna = v.columna-+1;
+			colaEstados.push(eInsertar);
+
+		}else if (!visitados[v.fila+1][v.columna] && puedeAvanzar(v.fila+1,v.columna)){
+			visitados[v.fila+1][v.columna] = true;
+			eInsertar.fila = v.fila+1;
+			eInsertar.columna = v.columna;
+			colaEstados.push(eInsertar);
+		}
+	}
+	return false; 
 }
 
+
+Action ComportamientoJugador::think(Sensores sensores) {
+	if(!hayPlan){
+		estado origen;
+		origen.fila = sensores.mensajeF;
+		origen.columna = sensores.mensajeC;
+		origen.orientacion = 0;
+		destino.columna = sensores.destinoC;
+		destino.fila =  sensores.destinoF;
+		hayPlan = pathFinding(origen, destino,plan);
+	}
+	Action accion = Action::actFORWARD;
+	if(hayPlan){
+		std::list<Action>::iterator it = plan.begin();
+		accion = *it;
+		plan.erase(it);
+	}
+
+	return accion; 
+}
+
+int ComportamientoJugador::interact(Action accion, int valor) {
+return false; 
+}
+
+
+//Cosas que he incluido
 vector < vector < double >> ComportamientoJugador::calcularPotencialMapa(const estado & destino) {
 	vector < vector < double >> mapaMuros; 
 	vector < vector < double >> mapaDistancia; 
@@ -86,6 +148,7 @@ vector < vector < double >> ComportamientoJugador::calcularPotencialMapa(const e
 	
 	return  mapaDevolver;
 }
+
 bool ComportamientoJugador::puedeAvanzar(int fila, int columna) {
 	if (mapaResultado[fila][columna] == 'B' || mapaResultado[fila][columna] == 'A' || mapaResultado[fila][columna] == 'P' || 
 	   mapaResultado[fila][columna] == 'M' || mapaResultado[fila][columna] == 'D')
@@ -93,6 +156,7 @@ bool ComportamientoJugador::puedeAvanzar(int fila, int columna) {
 	else
 		return true; 
 }
+
 /*
 void ComportamientoJugador::distanciaMuro(int fila, int columna, vector < vector < double >>  & mapaMuros) {
 	for (int distancia = 1; distancia <= 10; distancia++) {
@@ -105,10 +169,3 @@ void ComportamientoJugador::distanciaMuro(int fila, int columna, vector < vector
 	}
 }
 */
-Action ComportamientoJugador::think(Sensores sensores) {
-return Action::actFORWARD; 
-}
-
-int ComportamientoJugador::interact(Action accion, int valor) {
-return false; 
-}

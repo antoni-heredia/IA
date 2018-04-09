@@ -130,21 +130,18 @@ Action ComportamientoJugador::think(Sensores sensores) {
 			}
 			cout << "fil: " << fil << "  col: " << col << " Or: " << brujula << endl;
 	}
-	cout << "Destino fil: " << sensores.destinoF << "  col: " << sensores.destinoC << endl;
 
-	if (sensores.reset){
-		hayPlan = false;
-	}
+
 
 	// Determinar si ha cambiado el destino desde la ultima planificacion
-	if (hayPlan and (sensores.destinoF != ultPosF or sensores.destinoC != ultPosC)){
+	if (hayPlan and (sensores.destinoF != destino.fila or sensores.destinoC != destino.columna)){
 		cout << "El destino ha cambiado\n";
 		hayPlan = false;
 	}
 
 	// Determinar si tengo que construir un plan
 	if (!hayPlan){
-		estado origen, destino;
+		estado origen;
 		origen.fila = fil;
 		origen.columna = col;
 		origen.orientacion = brujula;
@@ -152,10 +149,7 @@ Action ComportamientoJugador::think(Sensores sensores) {
 		destino.fila = sensores.destinoF;
 		destino.columna = sensores.destinoC;
 
-    hayPlan = pathFinding(origen,destino,plan);
-
-		ultPosF = sensores.destinoF;
-		ultPosC = sensores.destinoC;
+    		hayPlan = pathFinding(origen,destino,plan);
 	}
 
 

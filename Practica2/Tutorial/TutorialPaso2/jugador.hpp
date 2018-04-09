@@ -51,7 +51,7 @@ class ComportamientoJugador : public Comportamiento {
     // Nuevas Variables de Estado
     Action ultimaAccion;
     bool hayPlan;
-    int ultPosF, ultPosC;
+
 
 
     bool pathFinding(const estado &origen, const estado &destino, list<Action> &plan);
