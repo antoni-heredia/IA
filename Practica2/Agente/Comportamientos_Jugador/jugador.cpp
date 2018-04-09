@@ -262,26 +262,27 @@ bool ComportamientoJugador::pathFinding(const estado &origen, const estado &dest
 Action ComportamientoJugador::think(Sensores sensores)
 {
 	estado origen;
-
+	origen.fila = sensores.mensajeF;
+	origen.columna = sensores.mensajeC;
+	origen.orientacion = 0;
 	if (!hayPlan)
 	{
-		origen.fila = sensores.mensajeF;
-		origen.columna = sensores.mensajeC;
-		origen.orientacion = 0;
+		
 
 		destino.columna = sensores.destinoC;
 		destino.fila = sensores.destinoF;
-		cout << " a buscar un plan" << endl;
+		//cout << " a buscar un plan" << endl;
 
 		hayPlan = pathFinding(origen, destino, plan);		cout << " a buscar un plan" << endl;
 
-		//VisualizaPlan(origen, plan);
 	}
 	Action accion = Action::actFORWARD;
 
-	if (hayPlan)
+	if (hayPlan && !plan.empty())
 	{
-		cout << " hay plan" << endl;
+		//cout << " hay plan" << endl;
+		//VisualizaPlan(origen, plan);
+
 		std::list<Action>::iterator it = plan.begin();
 		accion = *it;
 		plan.pop_front();
