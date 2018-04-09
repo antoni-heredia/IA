@@ -4,13 +4,13 @@
 #include "comportamientos/comportamiento.hpp"
 
 #include <list>
-
 struct estado {
   int fila;
   int columna;
   int orientacion;
 };
-
+int nuevaOrientacion(estado anterior, estado actual);
+bool sonMismoPunto(estado primero, estado segundo);
 class ComportamientoJugador : public Comportamiento {
   public:
     ComportamientoJugador(unsigned int size) : Comportamiento(size) {

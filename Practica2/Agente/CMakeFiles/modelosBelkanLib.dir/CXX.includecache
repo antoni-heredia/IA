@@ -6,51 +6,51 @@
 
 #IncludeRegexTransform: 
 
-/home/antonio/Documentos/git/IA/Practica2/Agente/src/modelos/aldeano/aldeano.cpp
+/home/antonio/git/IA/Practica2/Agente/src/modelos/aldeano/aldeano.cpp
 modelos/aldeano/aldeano.hpp
-/home/antonio/Documentos/git/IA/Practica2/Agente/src/modelos/aldeano/modelos/aldeano/aldeano.hpp
+/home/antonio/git/IA/Practica2/Agente/src/modelos/aldeano/modelos/aldeano/aldeano.hpp
 
-/home/antonio/Documentos/git/IA/Practica2/Agente/src/modelos/aldeano/brazo.cpp
+/home/antonio/git/IA/Practica2/Agente/src/modelos/aldeano/brazo.cpp
 modelos/aldeano/brazo.hpp
-/home/antonio/Documentos/git/IA/Practica2/Agente/src/modelos/aldeano/modelos/aldeano/brazo.hpp
+/home/antonio/git/IA/Practica2/Agente/src/modelos/aldeano/modelos/aldeano/brazo.hpp
 
-/home/antonio/Documentos/git/IA/Practica2/Agente/src/modelos/aldeano/cabeza.cpp
+/home/antonio/git/IA/Practica2/Agente/src/modelos/aldeano/cabeza.cpp
 modelos/aldeano/cabeza.hpp
-/home/antonio/Documentos/git/IA/Practica2/Agente/src/modelos/aldeano/modelos/aldeano/cabeza.hpp
+/home/antonio/git/IA/Practica2/Agente/src/modelos/aldeano/modelos/aldeano/cabeza.hpp
 
-/home/antonio/Documentos/git/IA/Practica2/Agente/src/modelos/aldeano/cintura.cpp
+/home/antonio/git/IA/Practica2/Agente/src/modelos/aldeano/cintura.cpp
 modelos/aldeano/cintura.hpp
-/home/antonio/Documentos/git/IA/Practica2/Agente/src/modelos/aldeano/modelos/aldeano/cintura.hpp
+/home/antonio/git/IA/Practica2/Agente/src/modelos/aldeano/modelos/aldeano/cintura.hpp
 
-/home/antonio/Documentos/git/IA/Practica2/Agente/src/modelos/aldeano/pierna.cpp
+/home/antonio/git/IA/Practica2/Agente/src/modelos/aldeano/pierna.cpp
 modelos/aldeano/pierna.hpp
-/home/antonio/Documentos/git/IA/Practica2/Agente/src/modelos/aldeano/modelos/aldeano/pierna.hpp
+/home/antonio/git/IA/Practica2/Agente/src/modelos/aldeano/modelos/aldeano/pierna.hpp
 
-/home/antonio/Documentos/git/IA/Practica2/Agente/src/modelos/aldeano/torso.cpp
+/home/antonio/git/IA/Practica2/Agente/src/modelos/aldeano/torso.cpp
 modelos/aldeano/torso.hpp
-/home/antonio/Documentos/git/IA/Practica2/Agente/src/modelos/aldeano/modelos/aldeano/torso.hpp
+/home/antonio/git/IA/Practica2/Agente/src/modelos/aldeano/modelos/aldeano/torso.hpp
 
-/home/antonio/Documentos/git/IA/Practica2/Agente/src/modelos/arbol/arbol.cpp
+/home/antonio/git/IA/Practica2/Agente/src/modelos/arbol/arbol.cpp
 modelos/arbol/arbol.hpp
-/home/antonio/Documentos/git/IA/Practica2/Agente/src/modelos/arbol/modelos/arbol/arbol.hpp
+/home/antonio/git/IA/Practica2/Agente/src/modelos/arbol/modelos/arbol/arbol.hpp
 GL/glut.h
 -
 
-/home/antonio/Documentos/git/IA/Practica2/Agente/src/modelos/item/item.cpp
+/home/antonio/git/IA/Practica2/Agente/src/modelos/item/item.cpp
 modelos/item/item.hpp
-/home/antonio/Documentos/git/IA/Practica2/Agente/src/modelos/item/modelos/item/item.hpp
+/home/antonio/git/IA/Practica2/Agente/src/modelos/item/modelos/item/item.hpp
 
-/home/antonio/Documentos/git/IA/Practica2/Agente/src/modelos/jugador/jugador3d.cpp
+/home/antonio/git/IA/Practica2/Agente/src/modelos/jugador/jugador3d.cpp
 modelos/jugador/jugador3d.hpp
-/home/antonio/Documentos/git/IA/Practica2/Agente/src/modelos/jugador/modelos/jugador/jugador3d.hpp
+/home/antonio/git/IA/Practica2/Agente/src/modelos/jugador/modelos/jugador/jugador3d.hpp
 
-/home/antonio/Documentos/git/IA/Practica2/Agente/src/modelos/jugador/quesito.cpp
+/home/antonio/git/IA/Practica2/Agente/src/modelos/jugador/quesito.cpp
 modelos/jugador/quesito.hpp
-/home/antonio/Documentos/git/IA/Practica2/Agente/src/modelos/jugador/modelos/jugador/quesito.hpp
+/home/antonio/git/IA/Practica2/Agente/src/modelos/jugador/modelos/jugador/quesito.hpp
 
-/home/antonio/Documentos/git/IA/Practica2/Agente/src/modelos/retrato.cpp
+/home/antonio/git/IA/Practica2/Agente/src/modelos/retrato.cpp
 modelos/retrato.hpp
-/home/antonio/Documentos/git/IA/Practica2/Agente/src/modelos/modelos/retrato.hpp
+/home/antonio/git/IA/Practica2/Agente/src/modelos/modelos/retrato.hpp
 
 include/modelos/aldeano/aldeano.hpp
 modelos/aldeano/torso.hpp

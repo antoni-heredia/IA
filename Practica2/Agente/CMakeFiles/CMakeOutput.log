@@ -2572,3 +2572,99 @@ int main() {
 #endif
 }
 
+Performing C SOURCE FILE Test OpenMP_FLAG_DETECTED succeeded with the following output:
+Change Dir: /home/antonio/git/IA/Practica2/Agente/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3c15e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3c15e.dir/build.make CMakeFiles/cmTC_3c15e.dir/build
+make[1]: Entering directory '/home/antonio/git/IA/Practica2/Agente/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3c15e.dir/src.c.o
+/usr/bin/cc    -DOpenMP_FLAG_DETECTED -fopenmp   -o CMakeFiles/cmTC_3c15e.dir/src.c.o   -c /home/antonio/git/IA/Practica2/Agente/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_3c15e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3c15e.dir/link.txt --verbose=1
+/usr/bin/cc   -DOpenMP_FLAG_DETECTED -fopenmp    CMakeFiles/cmTC_3c15e.dir/src.c.o  -o cmTC_3c15e -rdynamic 
+make[1]: Leaving directory '/home/antonio/git/IA/Practica2/Agente/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+#include <omp.h>
+int main() {
+#ifdef _OPENMP
+  return 0;
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C++ SOURCE FILE Test OpenMP_FLAG_DETECTED succeeded with the following output:
+Change Dir: /home/antonio/git/IA/Practica2/Agente/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1a566/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1a566.dir/build.make CMakeFiles/cmTC_1a566.dir/build
+make[1]: Entering directory '/home/antonio/git/IA/Practica2/Agente/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_1a566.dir/src.cxx.o
+/usr/bin/c++     -DOpenMP_FLAG_DETECTED -fopenmp   -o CMakeFiles/cmTC_1a566.dir/src.cxx.o -c /home/antonio/git/IA/Practica2/Agente/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_1a566
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1a566.dir/link.txt --verbose=1
+/usr/bin/c++    -DOpenMP_FLAG_DETECTED -fopenmp    CMakeFiles/cmTC_1a566.dir/src.cxx.o  -o cmTC_1a566 -rdynamic 
+make[1]: Leaving directory '/home/antonio/git/IA/Practica2/Agente/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+#include <omp.h>
+int main() {
+#ifdef _OPENMP
+  return 0;
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C SOURCE FILE Test OpenMP_FLAG_DETECTED succeeded with the following output:
+Change Dir: /home/antonio/git/IA/Practica2/Agente/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e9e0d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e9e0d.dir/build.make CMakeFiles/cmTC_e9e0d.dir/build
+make[1]: Entering directory '/home/antonio/git/IA/Practica2/Agente/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e9e0d.dir/src.c.o
+/usr/bin/cc    -DOpenMP_FLAG_DETECTED -fopenmp   -o CMakeFiles/cmTC_e9e0d.dir/src.c.o   -c /home/antonio/git/IA/Practica2/Agente/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_e9e0d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e9e0d.dir/link.txt --verbose=1
+/usr/bin/cc   -DOpenMP_FLAG_DETECTED -fopenmp    CMakeFiles/cmTC_e9e0d.dir/src.c.o  -o cmTC_e9e0d -rdynamic 
+make[1]: Leaving directory '/home/antonio/git/IA/Practica2/Agente/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+#include <omp.h>
+int main() {
+#ifdef _OPENMP
+  return 0;
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C++ SOURCE FILE Test OpenMP_FLAG_DETECTED succeeded with the following output:
+Change Dir: /home/antonio/git/IA/Practica2/Agente/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6620a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6620a.dir/build.make CMakeFiles/cmTC_6620a.dir/build
+make[1]: Entering directory '/home/antonio/git/IA/Practica2/Agente/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_6620a.dir/src.cxx.o
+/usr/bin/c++     -DOpenMP_FLAG_DETECTED -fopenmp   -o CMakeFiles/cmTC_6620a.dir/src.cxx.o -c /home/antonio/git/IA/Practica2/Agente/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_6620a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6620a.dir/link.txt --verbose=1
+/usr/bin/c++    -DOpenMP_FLAG_DETECTED -fopenmp    CMakeFiles/cmTC_6620a.dir/src.cxx.o  -o cmTC_6620a -rdynamic 
+make[1]: Leaving directory '/home/antonio/git/IA/Practica2/Agente/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+#include <omp.h>
+int main() {
+#ifdef _OPENMP
+  return 0;
+#else
+  breaks_on_purpose
+#endif
+}
+
