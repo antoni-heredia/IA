@@ -26,7 +26,7 @@ void ComportamientoJugador::PintaPlan(list<Action> plan)
 		{
 			cout << "- ";
 		}
-		it++;
+		++it;
 	}
 	cout << endl;
 }
@@ -91,7 +91,6 @@ bool ComportamientoJugador::pathFinding(const estado &origen, const estado &dest
 	list<estado> lorigen;
 	list<Action> primeraAccion;
 
-	primeraAccion.push_back(Action::actIDLE);
 	lorigen.push_back(origen);
 
 	colaEstados.push(lorigen);
@@ -104,13 +103,16 @@ bool ComportamientoJugador::pathFinding(const estado &origen, const estado &dest
 		list<Action> frenteAcciones = colaAcciones.front();
 
 		colaEstados.pop();
-		colaAcciones.pop();
+		if(!colaAcciones.empty())
+			colaAcciones.pop();
 
 		estado ultimoEstado = frenteEstados.back();
 
 		if (sonMismoPunto(ultimoEstado, destino))
 		{
 			plan = frenteAcciones;
+			VisualizaPlan(origen, plan);
+
 			return true;
 		}
 		estado eInsertar;
@@ -209,6 +211,7 @@ bool ComportamientoJugador::pathFinding(const estado &origen, const estado &dest
 			{
 				nuevasAcciones.push_back(Action::actFORWARD);
 			}
+
 			else if (ultimoEstado.orientacion == 2)
 			{
 				nuevasAcciones.push_back(Action::actTURN_L);
@@ -261,19 +264,19 @@ bool ComportamientoJugador::pathFinding(const estado &origen, const estado &dest
 
 Action ComportamientoJugador::think(Sensores sensores)
 {
+	
 	estado origen;
 	origen.fila = sensores.mensajeF;
 	origen.columna = sensores.mensajeC;
 	origen.orientacion = 0;
-	if (!hayPlan)
+	if (!hayPlan))
 	{
-		
-
+		hayPlan = false;
 		destino.columna = sensores.destinoC;
 		destino.fila = sensores.destinoF;
-		//cout << " a buscar un plan" << endl;
 
-		hayPlan = pathFinding(origen, destino, plan);		cout << " a buscar un plan" << endl;
+		hayPlan = pathFinding(origen, destino, plan);
+		cout << " a buscar un plan" << endl;
 
 	}
 	Action accion = Action::actFORWARD;
@@ -281,7 +284,6 @@ Action ComportamientoJugador::think(Sensores sensores)
 	if (hayPlan && !plan.empty())
 	{
 		//cout << " hay plan" << endl;
-		//VisualizaPlan(origen, plan);
 
 		std::list<Action>::iterator it = plan.begin();
 		accion = *it;
@@ -367,3 +369,4 @@ bool sonMismoPunto(estado primero, estado segundo)
 
 	return false;
 }
+

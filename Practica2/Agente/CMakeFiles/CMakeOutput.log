@@ -2668,3 +2668,51 @@ int main() {
 #endif
 }
 
+Performing C SOURCE FILE Test OpenMP_FLAG_DETECTED succeeded with the following output:
+Change Dir: /home/antonio/Documentos/git/IA/Practica2/Agente/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9bfdf/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9bfdf.dir/build.make CMakeFiles/cmTC_9bfdf.dir/build
+make[1]: se entra en el directorio '/home/antonio/Documentos/git/IA/Practica2/Agente/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9bfdf.dir/src.c.o
+/usr/bin/cc    -DOpenMP_FLAG_DETECTED -fopenmp   -o CMakeFiles/cmTC_9bfdf.dir/src.c.o   -c /home/antonio/Documentos/git/IA/Practica2/Agente/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_9bfdf
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9bfdf.dir/link.txt --verbose=1
+/usr/bin/cc   -DOpenMP_FLAG_DETECTED -fopenmp    CMakeFiles/cmTC_9bfdf.dir/src.c.o  -o cmTC_9bfdf -rdynamic 
+make[1]: se sale del directorio '/home/antonio/Documentos/git/IA/Practica2/Agente/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+#include <omp.h>
+int main() {
+#ifdef _OPENMP
+  return 0;
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C++ SOURCE FILE Test OpenMP_FLAG_DETECTED succeeded with the following output:
+Change Dir: /home/antonio/Documentos/git/IA/Practica2/Agente/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_80eb5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_80eb5.dir/build.make CMakeFiles/cmTC_80eb5.dir/build
+make[1]: se entra en el directorio '/home/antonio/Documentos/git/IA/Practica2/Agente/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_80eb5.dir/src.cxx.o
+/usr/bin/c++     -DOpenMP_FLAG_DETECTED -fopenmp   -o CMakeFiles/cmTC_80eb5.dir/src.cxx.o -c /home/antonio/Documentos/git/IA/Practica2/Agente/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_80eb5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_80eb5.dir/link.txt --verbose=1
+/usr/bin/c++    -DOpenMP_FLAG_DETECTED -fopenmp    CMakeFiles/cmTC_80eb5.dir/src.cxx.o  -o cmTC_80eb5 -rdynamic 
+make[1]: se sale del directorio '/home/antonio/Documentos/git/IA/Practica2/Agente/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+#include <omp.h>
+int main() {
+#ifdef _OPENMP
+  return 0;
+#else
+  breaks_on_purpose
+#endif
+}
+
