@@ -111,6 +111,7 @@ bool ComportamientoJugador::pathFinding(const estado &origen, const estado &dest
 		if (sonMismoPunto(ultimoEstado, destino))
 		{
 			plan = frenteAcciones;
+			plan.push_back(Action::actIDLE);
 			VisualizaPlan(origen, plan);
 
 			return true;
@@ -269,7 +270,7 @@ Action ComportamientoJugador::think(Sensores sensores)
 	origen.fila = sensores.mensajeF;
 	origen.columna = sensores.mensajeC;
 	origen.orientacion = 0;
-	if (!hayPlan))
+	if (!hayPlan)
 	{
 		hayPlan = false;
 		destino.columna = sensores.destinoC;
