@@ -600,3 +600,51 @@ int main() {
 #endif
 }
 
+Performing C SOURCE FILE Test OpenMP_FLAG_DETECTED succeeded with the following output:
+Change Dir: /home/antonio/git/IA/Practica2/Agente/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_501f1/fast"
+/usr/bin/make -f CMakeFiles/cmTC_501f1.dir/build.make CMakeFiles/cmTC_501f1.dir/build
+make[1]: Entering directory '/home/antonio/git/IA/Practica2/Agente/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_501f1.dir/src.c.o
+/usr/bin/cc    -DOpenMP_FLAG_DETECTED -fopenmp   -o CMakeFiles/cmTC_501f1.dir/src.c.o   -c /home/antonio/git/IA/Practica2/Agente/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_501f1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_501f1.dir/link.txt --verbose=1
+/usr/bin/cc   -DOpenMP_FLAG_DETECTED -fopenmp    CMakeFiles/cmTC_501f1.dir/src.c.o  -o cmTC_501f1 -rdynamic 
+make[1]: Leaving directory '/home/antonio/git/IA/Practica2/Agente/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+#include <omp.h>
+int main() {
+#ifdef _OPENMP
+  return 0;
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C++ SOURCE FILE Test OpenMP_FLAG_DETECTED succeeded with the following output:
+Change Dir: /home/antonio/git/IA/Practica2/Agente/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_872aa/fast"
+/usr/bin/make -f CMakeFiles/cmTC_872aa.dir/build.make CMakeFiles/cmTC_872aa.dir/build
+make[1]: Entering directory '/home/antonio/git/IA/Practica2/Agente/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_872aa.dir/src.cxx.o
+/usr/bin/c++     -DOpenMP_FLAG_DETECTED -fopenmp   -o CMakeFiles/cmTC_872aa.dir/src.cxx.o -c /home/antonio/git/IA/Practica2/Agente/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_872aa
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_872aa.dir/link.txt --verbose=1
+/usr/bin/c++    -DOpenMP_FLAG_DETECTED -fopenmp    CMakeFiles/cmTC_872aa.dir/src.cxx.o  -o cmTC_872aa -rdynamic 
+make[1]: Leaving directory '/home/antonio/git/IA/Practica2/Agente/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+#include <omp.h>
+int main() {
+#ifdef _OPENMP
+  return 0;
+#else
+  breaks_on_purpose
+#endif
+}
+

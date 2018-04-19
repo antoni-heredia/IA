@@ -116,9 +116,13 @@ bool ComportamientoJugador::pathFinding(const estado &origen, const estado &dest
 
 			return true;
 		}
+
 		estado eInsertar;
+		cout << ultimoEstado.fila << ultimoEstado.columna - 1 << endl;
+
 		if (!visitados[ultimoEstado.fila][ultimoEstado.columna - 1] && puedeAvanzar(ultimoEstado.fila, ultimoEstado.columna - 1))
 		{
+
 			visitados[ultimoEstado.fila][ultimoEstado.columna - 1] = true;
 
 			eInsertar.fila = ultimoEstado.fila;
@@ -126,28 +130,8 @@ bool ComportamientoJugador::pathFinding(const estado &origen, const estado &dest
 			eInsertar.orientacion = nuevaOrientacion(ultimoEstado, eInsertar);
 
 			list<Action> nuevasAcciones = frenteAcciones;
-			if (ultimoEstado.orientacion == 0)
-			{
-				nuevasAcciones.push_back(Action::actTURN_L);
-				nuevasAcciones.push_back(Action::actFORWARD);
-			}
-			else if (ultimoEstado.orientacion == 1)
-			{
-				nuevasAcciones.push_back(Action::actTURN_L);
-				nuevasAcciones.push_back(Action::actTURN_L);
-				nuevasAcciones.push_back(Action::actFORWARD);
-			}
-			else if (ultimoEstado.orientacion == 2)
-			{
-
-				nuevasAcciones.push_back(Action::actTURN_R);
-				nuevasAcciones.push_back(Action::actFORWARD);
-			}
-			else if (ultimoEstado.orientacion == 3)
-			{
-				nuevasAcciones.push_back(Action::actFORWARD);
-			}
-
+			aniadirMovimientos(ultimoEstado,eInsertar, nuevasAcciones);
+			
 			frenteEstados.push_back(eInsertar);
 
 			colaEstados.push(frenteEstados);
@@ -157,6 +141,7 @@ bool ComportamientoJugador::pathFinding(const estado &origen, const estado &dest
 		}
 		if (!visitados[ultimoEstado.fila - 1][ultimoEstado.columna] && puedeAvanzar(ultimoEstado.fila - 1, ultimoEstado.columna))
 		{
+
 			visitados[ultimoEstado.fila - 1][ultimoEstado.columna] = true;
 
 			eInsertar.fila = ultimoEstado.fila - 1;
@@ -168,28 +153,11 @@ bool ComportamientoJugador::pathFinding(const estado &origen, const estado &dest
 			frenteEstados.pop_back();
 
 			list<Action> nuevasAcciones = frenteAcciones;
-			if (ultimoEstado.orientacion == 0)
-			{
-				nuevasAcciones.push_back(Action::actFORWARD);
-			}
-			else if (ultimoEstado.orientacion == 1)
-			{
-				nuevasAcciones.push_back(Action::actTURN_L);
-				nuevasAcciones.push_back(Action::actFORWARD);
-			}
-			else if (ultimoEstado.orientacion == 2)
-			{
-				nuevasAcciones.push_back(Action::actTURN_L);
-				nuevasAcciones.push_back(Action::actTURN_L);
-				nuevasAcciones.push_back(Action::actFORWARD);
-			}
-			else if (ultimoEstado.orientacion == 3)
-			{
-				nuevasAcciones.push_back(Action::actTURN_R);
-				nuevasAcciones.push_back(Action::actFORWARD);
-			}
+			aniadirMovimientos(ultimoEstado,eInsertar, nuevasAcciones);
+
 			colaAcciones.push(nuevasAcciones);
 		}
+
 		if (!visitados[ultimoEstado.fila][ultimoEstado.columna + 1] && puedeAvanzar(ultimoEstado.fila, ultimoEstado.columna + 1))
 		{
 			visitados[ultimoEstado.fila][ultimoEstado.columna + 1] = true;
@@ -203,27 +171,8 @@ bool ComportamientoJugador::pathFinding(const estado &origen, const estado &dest
 			frenteEstados.pop_back();
 
 			list<Action> nuevasAcciones = frenteAcciones;
-			if (ultimoEstado.orientacion == 0)
-			{
-				nuevasAcciones.push_back(Action::actTURN_R);
-				nuevasAcciones.push_back(Action::actFORWARD);
-			}
-			else if (ultimoEstado.orientacion == 1)
-			{
-				nuevasAcciones.push_back(Action::actFORWARD);
-			}
+			aniadirMovimientos(ultimoEstado,eInsertar, nuevasAcciones);
 
-			else if (ultimoEstado.orientacion == 2)
-			{
-				nuevasAcciones.push_back(Action::actTURN_L);
-				nuevasAcciones.push_back(Action::actFORWARD);
-			}
-			else if (ultimoEstado.orientacion == 3)
-			{
-				nuevasAcciones.push_back(Action::actTURN_L);
-				nuevasAcciones.push_back(Action::actTURN_L);
-				nuevasAcciones.push_back(Action::actFORWARD);
-			}
 			colaAcciones.push(nuevasAcciones);
 		}
 		if (!visitados[ultimoEstado.fila + 1][ultimoEstado.columna] && puedeAvanzar(ultimoEstado.fila + 1, ultimoEstado.columna))
@@ -237,28 +186,11 @@ bool ComportamientoJugador::pathFinding(const estado &origen, const estado &dest
 			frenteEstados.pop_back();
 
 			list<Action> nuevasAcciones = frenteAcciones;
-			if (ultimoEstado.orientacion == 0)
-			{
-				nuevasAcciones.push_back(Action::actTURN_L);
-				nuevasAcciones.push_back(Action::actTURN_L);
-				nuevasAcciones.push_back(Action::actFORWARD);
-			}
-			else if (ultimoEstado.orientacion == 1)
-			{
-				nuevasAcciones.push_back(Action::actTURN_R);
-				nuevasAcciones.push_back(Action::actFORWARD);
-			}
-			else if (ultimoEstado.orientacion == 2)
-			{
-				nuevasAcciones.push_back(Action::actFORWARD);
-			}
-			else if (ultimoEstado.orientacion == 3)
-			{
-				nuevasAcciones.push_back(Action::actTURN_L);
-				nuevasAcciones.push_back(Action::actFORWARD);
-			}
+			aniadirMovimientos(ultimoEstado,eInsertar, nuevasAcciones);
+
 			colaAcciones.push(nuevasAcciones);
 		}
+
 	}
 	return false;
 }
@@ -266,28 +198,65 @@ bool ComportamientoJugador::pathFinding(const estado &origen, const estado &dest
 Action ComportamientoJugador::think(Sensores sensores)
 {
 	
-	estado origen;
-	origen.fila = sensores.mensajeF;
-	origen.columna = sensores.mensajeC;
-	origen.orientacion = 0;
+	
 	if (!hayPlan)
 	{
+		fil = sensores.mensajeF;
+		col = sensores.mensajeC; 
+		estado origen;
+		origen.fila = sensores.mensajeF;
+		origen.columna = sensores.mensajeC;
+		origen.orientacion = brujula;
+		cout  << origen.fila << "-" << origen.columna << "-" << origen.orientacion << endl;
+
 		hayPlan = false;
 		destino.columna = sensores.destinoC;
 		destino.fila = sensores.destinoF;
-
-		hayPlan = pathFinding(origen, destino, plan);
+		plan.clear();
 		cout << " a buscar un plan" << endl;
 
+		hayPlan = pathFinding(origen, destino, plan);
+
+	}else if(sensores.superficie[2] == 'a'){
+		cout << "Encontrado aldeano" << endl;
+		estado origen;
+		origen.fila = fil;
+		origen.columna = col;
+		origen.orientacion = brujula;
+		cout  << origen.fila << "-" << origen.columna << "-" << origen.orientacion << endl;
+
+		hayPlan = false;
+		plan.clear();
+		hayPlan = pathFinding(origen, destino, plan);
+		if(hayPlan)
+			cout << "hay plan aldeano" << endl;
 	}
-	Action accion = Action::actFORWARD;
+	Action accion = Action::actIDLE;
 
 	if (hayPlan && !plan.empty())
 	{
-		//cout << " hay plan" << endl;
 
 		std::list<Action>::iterator it = plan.begin();
 		accion = *it;
+		brujula = orientacionBrujula(accion, brujula);
+		//Muevo la posicion del jugador
+		if(accion == Action::actFORWARD){
+			cout << "avanzo" << endl;
+			switch (brujula){
+			case 0:
+				fil--;
+				break;
+			case 1:
+				col++;
+				break;
+			case 2:
+				fil++;
+				break;
+			case 3:
+				col--;
+				break;
+	}
+		}
 		plan.pop_front();
 	}
 	return accion;
@@ -327,6 +296,8 @@ vector<vector<double>> ComportamientoJugador::calcularPotencialMapa(const estado
 
 bool ComportamientoJugador::puedeAvanzar(int fila, int columna)
 {
+	
+
 	if (mapaResultado[fila][columna] == 'B' || mapaResultado[fila][columna] == 'A' || mapaResultado[fila][columna] == 'P' ||
 		mapaResultado[fila][columna] == 'M' || mapaResultado[fila][columna] == 'D')
 		return false;
@@ -334,18 +305,7 @@ bool ComportamientoJugador::puedeAvanzar(int fila, int columna)
 		return true;
 }
 
-/*
-void ComportamientoJugador::distanciaMuro(int fila, int columna, vector < vector < double >>  & mapaMuros) {
-	for (int distancia = 1; distancia <= 10; distancia++) {
-		for (int f = -distancia; f <= distancia; f++) {
-			for (int c = -distancia; c <= distancia; c++) {
-				if ! (puedeAvanzar(fila+f,columna+c))
 
-			}
-		}
-	}
-}
-*/
 int nuevaOrientacion(estado anterior, estado actual)
 {
 	int orientacion;
@@ -371,3 +331,39 @@ bool sonMismoPunto(estado primero, estado segundo)
 	return false;
 }
 
+void aniadirMovimientos(estado anterior, estado actual, list<Action> & nuevasAcciones){
+	switch (mod(anterior.orientacion-actual.orientacion,4)){
+		case 1:
+			nuevasAcciones.push_back(Action::actTURN_L);
+			break;
+		case 2:
+			nuevasAcciones.push_back(Action::actTURN_R);
+			nuevasAcciones.push_back(Action::actTURN_R);
+			break;
+		case 3:
+			nuevasAcciones.push_back(Action::actTURN_R);
+			break;
+		case 0:
+			break;
+	}
+	nuevasAcciones.push_back(Action::actFORWARD);
+
+}
+
+int orientacionBrujula(Action accion, int brujula){
+	int nuevaBrujula = brujula;
+	switch (accion){
+		case Action::actTURN_L:
+			nuevaBrujula = mod(brujula-1,4);
+			break;
+		case Action::actTURN_R:
+			nuevaBrujula = mod(brujula+1,4);
+			break;
+
+	}
+	return nuevaBrujula;
+}
+
+int mod(int x, int m) {
+	return ((x%m) + m)%m;
+}

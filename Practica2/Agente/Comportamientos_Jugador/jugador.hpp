@@ -11,6 +11,9 @@ struct estado {
 };
 int nuevaOrientacion(estado anterior, estado actual);
 bool sonMismoPunto(estado primero, estado segundo);
+void aniadirMovimientos(estado anterior, estado actual, list<Action> & nuevasAcciones);
+int orientacionBrujula(Action accion, int brujula);
+int mod(int x, int m);
 class ComportamientoJugador : public Comportamiento {
   public:
     ComportamientoJugador(unsigned int size) : Comportamiento(size) {
