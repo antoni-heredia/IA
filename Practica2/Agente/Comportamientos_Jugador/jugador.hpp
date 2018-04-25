@@ -24,6 +24,7 @@ class ComportamientoJugador : public Comportamiento {
       destino.columna = -1;
       destino.orientacion = -1;
       hayPlan = false;
+      hayAldeanoEnfrente = false;
     }
     ComportamientoJugador(std::vector< std::vector< unsigned char> > mapaR) : Comportamiento(mapaR) {
       // Inicializar Variables de Estado
@@ -32,7 +33,7 @@ class ComportamientoJugador : public Comportamiento {
       destino.fila = -1;
       destino.columna = -1;
       destino.orientacion = -1;
-      hayPlan = false;
+      hayAldeanoEnfrente = false;
     }
     ComportamientoJugador(const ComportamientoJugador & comport) : Comportamiento(comport){}
     ~ComportamientoJugador(){}
@@ -48,7 +49,7 @@ class ComportamientoJugador : public Comportamiento {
     bool hayPlan;
     estado destino;
     list<Action> plan;
-
+    bool hayAldeanoEnfrente;
     bool puedeAvanzar(int fila, int columna);
     vector <vector<double>> calcularPotencialMapa(const estado &destino);
     

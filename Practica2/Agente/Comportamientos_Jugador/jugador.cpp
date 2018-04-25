@@ -97,6 +97,22 @@ bool ComportamientoJugador::pathFinding(const estado &origen, const estado &dest
 	colaAcciones.push(primeraAccion);
 
 	visitados[origen.fila][origen.columna] = true;
+	if(hayAldeanoEnfrente){
+		switch (origen.orientacion){
+			case 0:
+				visitados[origen.fila-1][origen.columna] = true;
+			break;
+			case 1:
+				visitados[origen.fila][origen.columna+1] = true;
+			break;
+			case 2:
+				visitados[origen.fila+1][origen.columna] = true;
+			break;
+			case 3:
+				visitados[origen.fila][origen.columna-1] = true;
+			break;
+		}
+	}
 	while (!colaEstados.empty())
 	{
 		list<estado> frenteEstados = colaEstados.front();
@@ -197,19 +213,27 @@ bool ComportamientoJugador::pathFinding(const estado &origen, const estado &dest
 
 Action ComportamientoJugador::think(Sensores sensores)
 {
-	
-	
-	if (!hayPlan)
-	{
+	if (sensores.mensajeF != -1){
 		fil = sensores.mensajeF;
-		col = sensores.mensajeC; 
+		col = sensores.mensajeC;
+	}
+	if (hayPlan and (sensores.destinoF != destino.fila or sensores.destinoC != destino.columna)){
+		cout << "El destino ha cambiado\n";
+		hayPlan = false;
+	}
+	
+	if (!hayPlan && !(sensores.superficie[2] == 'a'))
+	{
+ 
 		estado origen;
-		origen.fila = sensores.mensajeF;
-		origen.columna = sensores.mensajeC;
+		origen.fila = fil;
+		origen.columna = col;
 		origen.orientacion = brujula;
 		cout  << origen.fila << "-" << origen.columna << "-" << origen.orientacion << endl;
 
 		hayPlan = false;
+		hayAldeanoEnfrente = false;
+
 		destino.columna = sensores.destinoC;
 		destino.fila = sensores.destinoF;
 		plan.clear();
@@ -226,6 +250,7 @@ Action ComportamientoJugador::think(Sensores sensores)
 		cout  << origen.fila << "-" << origen.columna << "-" << origen.orientacion << endl;
 
 		hayPlan = false;
+		hayAldeanoEnfrente = true;
 		plan.clear();
 		hayPlan = pathFinding(origen, destino, plan);
 		if(hayPlan)

@@ -4,22 +4,22 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/antonio/git/IA/Practica2/Agente/src/obj3dlib/cono3d.cc" "/home/antonio/git/IA/Practica2/Agente/CMakeFiles/obj3DLib.dir/src/obj3dlib/cono3d.cc.o"
-  "/home/antonio/git/IA/Practica2/Agente/src/obj3dlib/cono3dwire.cc" "/home/antonio/git/IA/Practica2/Agente/CMakeFiles/obj3DLib.dir/src/obj3dlib/cono3dwire.cc.o"
-  "/home/antonio/git/IA/Practica2/Agente/src/obj3dlib/cubo3d.cc" "/home/antonio/git/IA/Practica2/Agente/CMakeFiles/obj3DLib.dir/src/obj3dlib/cubo3d.cc.o"
-  "/home/antonio/git/IA/Practica2/Agente/src/obj3dlib/dodecaedro3d.cc" "/home/antonio/git/IA/Practica2/Agente/CMakeFiles/obj3DLib.dir/src/obj3dlib/dodecaedro3d.cc.o"
-  "/home/antonio/git/IA/Practica2/Agente/src/obj3dlib/esfera3d.cc" "/home/antonio/git/IA/Practica2/Agente/CMakeFiles/obj3DLib.dir/src/obj3dlib/esfera3d.cc.o"
-  "/home/antonio/git/IA/Practica2/Agente/src/obj3dlib/file_ply_stl.cc" "/home/antonio/git/IA/Practica2/Agente/CMakeFiles/obj3DLib.dir/src/obj3dlib/file_ply_stl.cc.o"
-  "/home/antonio/git/IA/Practica2/Agente/src/obj3dlib/icosaedro3d.cc" "/home/antonio/git/IA/Practica2/Agente/CMakeFiles/obj3DLib.dir/src/obj3dlib/icosaedro3d.cc.o"
-  "/home/antonio/git/IA/Practica2/Agente/src/obj3dlib/jpeg_reader/jpg_imagen.cpp" "/home/antonio/git/IA/Practica2/Agente/CMakeFiles/obj3DLib.dir/src/obj3dlib/jpeg_reader/jpg_imagen.cpp.o"
-  "/home/antonio/git/IA/Practica2/Agente/src/obj3dlib/jpeg_reader/jpg_memsrc.cpp" "/home/antonio/git/IA/Practica2/Agente/CMakeFiles/obj3DLib.dir/src/obj3dlib/jpeg_reader/jpg_memsrc.cpp.o"
-  "/home/antonio/git/IA/Practica2/Agente/src/obj3dlib/jpeg_reader/jpg_readwrite.cpp" "/home/antonio/git/IA/Practica2/Agente/CMakeFiles/obj3DLib.dir/src/obj3dlib/jpeg_reader/jpg_readwrite.cpp.o"
-  "/home/antonio/git/IA/Practica2/Agente/src/obj3dlib/luz.cpp" "/home/antonio/git/IA/Practica2/Agente/CMakeFiles/obj3DLib.dir/src/obj3dlib/luz.cpp.o"
-  "/home/antonio/git/IA/Practica2/Agente/src/obj3dlib/objeto3d.cc" "/home/antonio/git/IA/Practica2/Agente/CMakeFiles/obj3DLib.dir/src/obj3dlib/objeto3d.cc.o"
-  "/home/antonio/git/IA/Practica2/Agente/src/obj3dlib/objrevolucion3d.cc" "/home/antonio/git/IA/Practica2/Agente/CMakeFiles/obj3DLib.dir/src/obj3dlib/objrevolucion3d.cc.o"
-  "/home/antonio/git/IA/Practica2/Agente/src/obj3dlib/octaedro3d.cc" "/home/antonio/git/IA/Practica2/Agente/CMakeFiles/obj3DLib.dir/src/obj3dlib/octaedro3d.cc.o"
-  "/home/antonio/git/IA/Practica2/Agente/src/obj3dlib/tetraedro3d.cc" "/home/antonio/git/IA/Practica2/Agente/CMakeFiles/obj3DLib.dir/src/obj3dlib/tetraedro3d.cc.o"
-  "/home/antonio/git/IA/Practica2/Agente/src/obj3dlib/toro3d.cc" "/home/antonio/git/IA/Practica2/Agente/CMakeFiles/obj3DLib.dir/src/obj3dlib/toro3d.cc.o"
+  "/home/antonio/Documentos/git/IA/Practica2/Agente/src/obj3dlib/cono3d.cc" "/home/antonio/Documentos/git/IA/Practica2/Agente/CMakeFiles/obj3DLib.dir/src/obj3dlib/cono3d.cc.o"
+  "/home/antonio/Documentos/git/IA/Practica2/Agente/src/obj3dlib/cono3dwire.cc" "/home/antonio/Documentos/git/IA/Practica2/Agente/CMakeFiles/obj3DLib.dir/src/obj3dlib/cono3dwire.cc.o"
+  "/home/antonio/Documentos/git/IA/Practica2/Agente/src/obj3dlib/cubo3d.cc" "/home/antonio/Documentos/git/IA/Practica2/Agente/CMakeFiles/obj3DLib.dir/src/obj3dlib/cubo3d.cc.o"
+  "/home/antonio/Documentos/git/IA/Practica2/Agente/src/obj3dlib/dodecaedro3d.cc" "/home/antonio/Documentos/git/IA/Practica2/Agente/CMakeFiles/obj3DLib.dir/src/obj3dlib/dodecaedro3d.cc.o"
+  "/home/antonio/Documentos/git/IA/Practica2/Agente/src/obj3dlib/esfera3d.cc" "/home/antonio/Documentos/git/IA/Practica2/Agente/CMakeFiles/obj3DLib.dir/src/obj3dlib/esfera3d.cc.o"
+  "/home/antonio/Documentos/git/IA/Practica2/Agente/src/obj3dlib/file_ply_stl.cc" "/home/antonio/Documentos/git/IA/Practica2/Agente/CMakeFiles/obj3DLib.dir/src/obj3dlib/file_ply_stl.cc.o"
+  "/home/antonio/Documentos/git/IA/Practica2/Agente/src/obj3dlib/icosaedro3d.cc" "/home/antonio/Documentos/git/IA/Practica2/Agente/CMakeFiles/obj3DLib.dir/src/obj3dlib/icosaedro3d.cc.o"
+  "/home/antonio/Documentos/git/IA/Practica2/Agente/src/obj3dlib/jpeg_reader/jpg_imagen.cpp" "/home/antonio/Documentos/git/IA/Practica2/Agente/CMakeFiles/obj3DLib.dir/src/obj3dlib/jpeg_reader/jpg_imagen.cpp.o"
+  "/home/antonio/Documentos/git/IA/Practica2/Agente/src/obj3dlib/jpeg_reader/jpg_memsrc.cpp" "/home/antonio/Documentos/git/IA/Practica2/Agente/CMakeFiles/obj3DLib.dir/src/obj3dlib/jpeg_reader/jpg_memsrc.cpp.o"
+  "/home/antonio/Documentos/git/IA/Practica2/Agente/src/obj3dlib/jpeg_reader/jpg_readwrite.cpp" "/home/antonio/Documentos/git/IA/Practica2/Agente/CMakeFiles/obj3DLib.dir/src/obj3dlib/jpeg_reader/jpg_readwrite.cpp.o"
+  "/home/antonio/Documentos/git/IA/Practica2/Agente/src/obj3dlib/luz.cpp" "/home/antonio/Documentos/git/IA/Practica2/Agente/CMakeFiles/obj3DLib.dir/src/obj3dlib/luz.cpp.o"
+  "/home/antonio/Documentos/git/IA/Practica2/Agente/src/obj3dlib/objeto3d.cc" "/home/antonio/Documentos/git/IA/Practica2/Agente/CMakeFiles/obj3DLib.dir/src/obj3dlib/objeto3d.cc.o"
+  "/home/antonio/Documentos/git/IA/Practica2/Agente/src/obj3dlib/objrevolucion3d.cc" "/home/antonio/Documentos/git/IA/Practica2/Agente/CMakeFiles/obj3DLib.dir/src/obj3dlib/objrevolucion3d.cc.o"
+  "/home/antonio/Documentos/git/IA/Practica2/Agente/src/obj3dlib/octaedro3d.cc" "/home/antonio/Documentos/git/IA/Practica2/Agente/CMakeFiles/obj3DLib.dir/src/obj3dlib/octaedro3d.cc.o"
+  "/home/antonio/Documentos/git/IA/Practica2/Agente/src/obj3dlib/tetraedro3d.cc" "/home/antonio/Documentos/git/IA/Practica2/Agente/CMakeFiles/obj3DLib.dir/src/obj3dlib/tetraedro3d.cc.o"
+  "/home/antonio/Documentos/git/IA/Practica2/Agente/src/obj3dlib/toro3d.cc" "/home/antonio/Documentos/git/IA/Practica2/Agente/CMakeFiles/obj3DLib.dir/src/obj3dlib/toro3d.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
