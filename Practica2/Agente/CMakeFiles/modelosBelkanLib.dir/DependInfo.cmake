@@ -4,17 +4,17 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/antonio/Documentos/git/IA/Practica2/Agente/src/modelos/aldeano/aldeano.cpp" "/home/antonio/Documentos/git/IA/Practica2/Agente/CMakeFiles/modelosBelkanLib.dir/src/modelos/aldeano/aldeano.cpp.o"
-  "/home/antonio/Documentos/git/IA/Practica2/Agente/src/modelos/aldeano/brazo.cpp" "/home/antonio/Documentos/git/IA/Practica2/Agente/CMakeFiles/modelosBelkanLib.dir/src/modelos/aldeano/brazo.cpp.o"
-  "/home/antonio/Documentos/git/IA/Practica2/Agente/src/modelos/aldeano/cabeza.cpp" "/home/antonio/Documentos/git/IA/Practica2/Agente/CMakeFiles/modelosBelkanLib.dir/src/modelos/aldeano/cabeza.cpp.o"
-  "/home/antonio/Documentos/git/IA/Practica2/Agente/src/modelos/aldeano/cintura.cpp" "/home/antonio/Documentos/git/IA/Practica2/Agente/CMakeFiles/modelosBelkanLib.dir/src/modelos/aldeano/cintura.cpp.o"
-  "/home/antonio/Documentos/git/IA/Practica2/Agente/src/modelos/aldeano/pierna.cpp" "/home/antonio/Documentos/git/IA/Practica2/Agente/CMakeFiles/modelosBelkanLib.dir/src/modelos/aldeano/pierna.cpp.o"
-  "/home/antonio/Documentos/git/IA/Practica2/Agente/src/modelos/aldeano/torso.cpp" "/home/antonio/Documentos/git/IA/Practica2/Agente/CMakeFiles/modelosBelkanLib.dir/src/modelos/aldeano/torso.cpp.o"
-  "/home/antonio/Documentos/git/IA/Practica2/Agente/src/modelos/arbol/arbol.cpp" "/home/antonio/Documentos/git/IA/Practica2/Agente/CMakeFiles/modelosBelkanLib.dir/src/modelos/arbol/arbol.cpp.o"
-  "/home/antonio/Documentos/git/IA/Practica2/Agente/src/modelos/item/item.cpp" "/home/antonio/Documentos/git/IA/Practica2/Agente/CMakeFiles/modelosBelkanLib.dir/src/modelos/item/item.cpp.o"
-  "/home/antonio/Documentos/git/IA/Practica2/Agente/src/modelos/jugador/jugador3d.cpp" "/home/antonio/Documentos/git/IA/Practica2/Agente/CMakeFiles/modelosBelkanLib.dir/src/modelos/jugador/jugador3d.cpp.o"
-  "/home/antonio/Documentos/git/IA/Practica2/Agente/src/modelos/jugador/quesito.cpp" "/home/antonio/Documentos/git/IA/Practica2/Agente/CMakeFiles/modelosBelkanLib.dir/src/modelos/jugador/quesito.cpp.o"
-  "/home/antonio/Documentos/git/IA/Practica2/Agente/src/modelos/retrato.cpp" "/home/antonio/Documentos/git/IA/Practica2/Agente/CMakeFiles/modelosBelkanLib.dir/src/modelos/retrato.cpp.o"
+  "/home/antonio/git/IA/Practica2/Agente/src/modelos/aldeano/aldeano.cpp" "/home/antonio/git/IA/Practica2/Agente/CMakeFiles/modelosBelkanLib.dir/src/modelos/aldeano/aldeano.cpp.o"
+  "/home/antonio/git/IA/Practica2/Agente/src/modelos/aldeano/brazo.cpp" "/home/antonio/git/IA/Practica2/Agente/CMakeFiles/modelosBelkanLib.dir/src/modelos/aldeano/brazo.cpp.o"
+  "/home/antonio/git/IA/Practica2/Agente/src/modelos/aldeano/cabeza.cpp" "/home/antonio/git/IA/Practica2/Agente/CMakeFiles/modelosBelkanLib.dir/src/modelos/aldeano/cabeza.cpp.o"
+  "/home/antonio/git/IA/Practica2/Agente/src/modelos/aldeano/cintura.cpp" "/home/antonio/git/IA/Practica2/Agente/CMakeFiles/modelosBelkanLib.dir/src/modelos/aldeano/cintura.cpp.o"
+  "/home/antonio/git/IA/Practica2/Agente/src/modelos/aldeano/pierna.cpp" "/home/antonio/git/IA/Practica2/Agente/CMakeFiles/modelosBelkanLib.dir/src/modelos/aldeano/pierna.cpp.o"
+  "/home/antonio/git/IA/Practica2/Agente/src/modelos/aldeano/torso.cpp" "/home/antonio/git/IA/Practica2/Agente/CMakeFiles/modelosBelkanLib.dir/src/modelos/aldeano/torso.cpp.o"
+  "/home/antonio/git/IA/Practica2/Agente/src/modelos/arbol/arbol.cpp" "/home/antonio/git/IA/Practica2/Agente/CMakeFiles/modelosBelkanLib.dir/src/modelos/arbol/arbol.cpp.o"
+  "/home/antonio/git/IA/Practica2/Agente/src/modelos/item/item.cpp" "/home/antonio/git/IA/Practica2/Agente/CMakeFiles/modelosBelkanLib.dir/src/modelos/item/item.cpp.o"
+  "/home/antonio/git/IA/Practica2/Agente/src/modelos/jugador/jugador3d.cpp" "/home/antonio/git/IA/Practica2/Agente/CMakeFiles/modelosBelkanLib.dir/src/modelos/jugador/jugador3d.cpp.o"
+  "/home/antonio/git/IA/Practica2/Agente/src/modelos/jugador/quesito.cpp" "/home/antonio/git/IA/Practica2/Agente/CMakeFiles/modelosBelkanLib.dir/src/modelos/jugador/quesito.cpp.o"
+  "/home/antonio/git/IA/Practica2/Agente/src/modelos/retrato.cpp" "/home/antonio/git/IA/Practica2/Agente/CMakeFiles/modelosBelkanLib.dir/src/modelos/retrato.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -25,7 +25,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/antonio/Documentos/git/IA/Practica2/Agente/CMakeFiles/obj3DLib.dir/DependInfo.cmake"
+  "/home/antonio/git/IA/Practica2/Agente/CMakeFiles/obj3DLib.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

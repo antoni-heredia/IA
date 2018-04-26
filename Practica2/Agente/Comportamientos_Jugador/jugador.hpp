@@ -50,6 +50,7 @@ class ComportamientoJugador : public Comportamiento {
     estado destino;
     list<Action> plan;
     bool hayAldeanoEnfrente;
+	bool puedeAvanzar(char letra);
     bool puedeAvanzar(int fila, int columna);
     vector <vector<double>> calcularPotencialMapa(const estado &destino);
     

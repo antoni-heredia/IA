@@ -134,8 +134,6 @@ bool ComportamientoJugador::pathFinding(const estado &origen, const estado &dest
 		}
 
 		estado eInsertar;
-		cout << ultimoEstado.fila << ultimoEstado.columna - 1 << endl;
-
 		if (!visitados[ultimoEstado.fila][ultimoEstado.columna - 1] && puedeAvanzar(ultimoEstado.fila, ultimoEstado.columna - 1))
 		{
 
@@ -155,6 +153,7 @@ bool ComportamientoJugador::pathFinding(const estado &origen, const estado &dest
 
 			frenteEstados.pop_back();
 		}
+
 		if (!visitados[ultimoEstado.fila - 1][ultimoEstado.columna] && puedeAvanzar(ultimoEstado.fila - 1, ultimoEstado.columna))
 		{
 
@@ -191,8 +190,10 @@ bool ComportamientoJugador::pathFinding(const estado &origen, const estado &dest
 
 			colaAcciones.push(nuevasAcciones);
 		}
+
 		if (!visitados[ultimoEstado.fila + 1][ultimoEstado.columna] && puedeAvanzar(ultimoEstado.fila + 1, ultimoEstado.columna))
 		{
+
 			visitados[ultimoEstado.fila + 1][ultimoEstado.columna] = true;
 			eInsertar.fila = ultimoEstado.fila + 1;
 			eInsertar.columna = ultimoEstado.columna;
@@ -207,66 +208,70 @@ bool ComportamientoJugador::pathFinding(const estado &origen, const estado &dest
 			colaAcciones.push(nuevasAcciones);
 		}
 
+
 	}
 	return false;
 }
 
 Action ComportamientoJugador::think(Sensores sensores)
 {
+
 	if (sensores.mensajeF != -1){
 		fil = sensores.mensajeF;
 		col = sensores.mensajeC;
-	}
+	}else 
 	if (hayPlan and (sensores.destinoF != destino.fila or sensores.destinoC != destino.columna)){
 		cout << "El destino ha cambiado\n";
 		hayPlan = false;
 	}
-	
-	if (!hayPlan && !(sensores.superficie[2] == 'a'))
+
+	estado origen;
+	origen.fila = fil;
+	origen.columna = col;
+	origen.orientacion = brujula;
+	Action accion = Action::actIDLE;
+
+	if(fil == 99 && col == 99){
+		int i;
+		bool seVePk = false;
+		for(i = 0; i < 16 && !seVePk; i++){
+			if(sensores.terreno[i] == 'k')
+				seVePk = true;
+		}
+		if(!seVePk && puedeAvanzar(sensores.terreno[2]))
+			accion = Action::actFORWARD;
+		else if(!seVePk)
+			accion = Action::actTURN_L;
+
+	}else if (!hayPlan && !(sensores.superficie[2] == 'a'))
 	{
  
-		estado origen;
-		origen.fila = fil;
-		origen.columna = col;
-		origen.orientacion = brujula;
-		cout  << origen.fila << "-" << origen.columna << "-" << origen.orientacion << endl;
-
 		hayPlan = false;
 		hayAldeanoEnfrente = false;
 
 		destino.columna = sensores.destinoC;
 		destino.fila = sensores.destinoF;
 		plan.clear();
-		cout << " a buscar un plan" << endl;
 
 		hayPlan = pathFinding(origen, destino, plan);
 
 	}else if(sensores.superficie[2] == 'a'){
-		cout << "Encontrado aldeano" << endl;
-		estado origen;
-		origen.fila = fil;
-		origen.columna = col;
-		origen.orientacion = brujula;
-		cout  << origen.fila << "-" << origen.columna << "-" << origen.orientacion << endl;
+	
 
 		hayPlan = false;
 		hayAldeanoEnfrente = true;
 		plan.clear();
 		hayPlan = pathFinding(origen, destino, plan);
-		if(hayPlan)
-			cout << "hay plan aldeano" << endl;
+		
 	}
-	Action accion = Action::actIDLE;
 
 	if (hayPlan && !plan.empty())
 	{
 
 		std::list<Action>::iterator it = plan.begin();
 		accion = *it;
-		brujula = orientacionBrujula(accion, brujula);
 		//Muevo la posicion del jugador
 		if(accion == Action::actFORWARD){
-			cout << "avanzo" << endl;
 			switch (brujula){
 			case 0:
 				fil--;
@@ -284,6 +289,9 @@ Action ComportamientoJugador::think(Sensores sensores)
 		}
 		plan.pop_front();
 	}
+
+	brujula = orientacionBrujula(accion, brujula);
+
 	return accion;
 }
 
@@ -318,16 +326,17 @@ vector<vector<double>> ComportamientoJugador::calcularPotencialMapa(const estado
 
 	return mapaDevolver;
 }
-
-bool ComportamientoJugador::puedeAvanzar(int fila, int columna)
-{
-	
-
-	if (mapaResultado[fila][columna] == 'B' || mapaResultado[fila][columna] == 'A' || mapaResultado[fila][columna] == 'P' ||
-		mapaResultado[fila][columna] == 'M' || mapaResultado[fila][columna] == 'D')
+bool ComportamientoJugador::puedeAvanzar(char letra){
+	if (letra == 'B' || letra == 'A' || letra == 'P' || letra == 'M' || letra == 'D')
 		return false;
 	else
 		return true;
+}
+bool ComportamientoJugador::puedeAvanzar(int fila, int columna)
+{
+	if(fila < 0 || columna < 0 || fila >= mapaResultado.size() || columna >= mapaResultado.size())
+		return false;
+	return puedeAvanzar(mapaResultado[fila][columna]);
 }
 
 
