@@ -6,37 +6,37 @@
 
 #IncludeRegexTransform: 
 
-/home/antonio/git/IA/Practica2/Agente/src/motorlib/entidad.cpp
+/home/antonio/Documentos/git/IA/Practica2/Agente/src/motorlib/entidad.cpp
 motorlib/entidad.hpp
-/home/antonio/git/IA/Practica2/Agente/src/motorlib/motorlib/entidad.hpp
+/home/antonio/Documentos/git/IA/Practica2/Agente/src/motorlib/motorlib/entidad.hpp
 
-/home/antonio/git/IA/Practica2/Agente/src/motorlib/mapa.cpp
+/home/antonio/Documentos/git/IA/Practica2/Agente/src/motorlib/mapa.cpp
 motorlib/mapa.hpp
-/home/antonio/git/IA/Practica2/Agente/src/motorlib/motorlib/mapa.hpp
+/home/antonio/Documentos/git/IA/Practica2/Agente/src/motorlib/motorlib/mapa.hpp
 
-/home/antonio/git/IA/Practica2/Agente/src/motorlib/monitor.cpp
+/home/antonio/Documentos/git/IA/Practica2/Agente/src/motorlib/monitor.cpp
 motorlib/monitor.hpp
-/home/antonio/git/IA/Practica2/Agente/src/motorlib/motorlib/monitor.hpp
+/home/antonio/Documentos/git/IA/Practica2/Agente/src/motorlib/motorlib/monitor.hpp
 fstream
 -
 
-/home/antonio/git/IA/Practica2/Agente/src/motorlib/motor_grafico.cpp
+/home/antonio/Documentos/git/IA/Practica2/Agente/src/motorlib/motor_grafico.cpp
 motorlib.hpp
-/home/antonio/git/IA/Practica2/Agente/src/motorlib/motorlib.hpp
+/home/antonio/Documentos/git/IA/Practica2/Agente/src/motorlib/motorlib.hpp
 glui/glui.h
 -
 dirent.h
 -
 
-/home/antonio/git/IA/Practica2/Agente/src/motorlib/motor_juego.cpp
+/home/antonio/Documentos/git/IA/Practica2/Agente/src/motorlib/motor_juego.cpp
 motorlib.hpp
-/home/antonio/git/IA/Practica2/Agente/src/motorlib/motorlib.hpp
+/home/antonio/Documentos/git/IA/Practica2/Agente/src/motorlib/motorlib.hpp
 unistd.h
 -
 
-/home/antonio/git/IA/Practica2/Agente/src/motorlib/util.cpp
+/home/antonio/Documentos/git/IA/Practica2/Agente/src/motorlib/util.cpp
 motorlib/util.h
-/home/antonio/git/IA/Practica2/Agente/src/motorlib/motorlib/util.h
+/home/antonio/Documentos/git/IA/Practica2/Agente/src/motorlib/motorlib/util.h
 
 Comportamientos_Jugador/aldeano.hpp
 chrono

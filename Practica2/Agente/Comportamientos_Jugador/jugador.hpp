@@ -50,11 +50,13 @@ class ComportamientoJugador : public Comportamiento {
     estado destino;
     list<Action> plan;
     bool hayAldeanoEnfrente;
-	bool puedeAvanzar(char letra);
+	  bool puedeAvanzar(char letra);
     bool puedeAvanzar(int fila, int columna);
     vector <vector<double>> calcularPotencialMapa(const estado &destino);
     
     bool pathFinding(const estado &origen, const estado &destino, list<Action> &plan);
+    bool busquedaAnchura(const estado &origen, const estado &destino, list<Action> &plan, vector< vector< unsigned char> > mapa);
+
     void PintaPlan(list<Action> plan);
 };
 

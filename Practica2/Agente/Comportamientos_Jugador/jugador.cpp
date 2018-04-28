@@ -219,8 +219,9 @@ Action ComportamientoJugador::think(Sensores sensores)
 	if (sensores.mensajeF != -1){
 		fil = sensores.mensajeF;
 		col = sensores.mensajeC;
-	}else 
-	if (hayPlan and (sensores.destinoF != destino.fila or sensores.destinoC != destino.columna)){
+		hayPlan = false;
+		
+	}else if (hayPlan and (sensores.destinoF != destino.fila or sensores.destinoC != destino.columna)){
 		cout << "El destino ha cambiado\n";
 		hayPlan = false;
 	}
@@ -235,15 +236,50 @@ Action ComportamientoJugador::think(Sensores sensores)
 		int i;
 		bool seVePk = false;
 		for(i = 0; i < 16 && !seVePk; i++){
-			if(sensores.terreno[i] == 'k')
-				seVePk = true;
+			cout << sensores.terreno[i] << "-";
+			if(sensores.terreno[i] == 'K'){
+				//seVePk = true;
+				cout << "Se vel el PK" << endl;
+			}
 		}
-		if(!seVePk && puedeAvanzar(sensores.terreno[2]))
+		cout << endl;
+		 if(seVePk){
+			origen.fila = 3;
+			origen.columna = 3;
+			//Buscar un plan para llegar al punto PK
+			//hayPlan =
+		}else if(puedeAvanzar(sensores.terreno[2]))
 			accion = Action::actFORWARD;
-		else if(!seVePk)
+		else
 			accion = Action::actTURN_L;
+		
 
-	}else if (!hayPlan && !(sensores.superficie[2] == 'a'))
+	}else{
+		int indice = 0;
+		for(int f = 0; f <= 3;f++){
+			for(int x = -f; x<= f; x++){
+				cout << fil << "-" << col << endl;
+				switch(brujula){
+					case 0:
+						mapaResultado[fil-f][col+x] = sensores.terreno[indice];
+					break;
+					case 1:
+						mapaResultado[fil+x][col+f] = sensores.terreno[indice];
+					break;
+					case 2:
+						mapaResultado[fil+f][col-x] = sensores.terreno[indice];
+					break;
+					case 3:	
+						mapaResultado[fil-x][col-f] = sensores.terreno[indice];
+					break;
+				}
+				indice++;
+			}
+			
+		}
+	}
+	
+	if (!hayPlan && !(sensores.superficie[2] == 'a'))
 	{
  
 		hayPlan = false;
@@ -255,9 +291,9 @@ Action ComportamientoJugador::think(Sensores sensores)
 
 		hayPlan = pathFinding(origen, destino, plan);
 
-	}else if(sensores.superficie[2] == 'a'){
+	}else if(sensores.superficie[2] == 'a' || !puedeAvanzar(sensores.terreno[2])){
 	
-
+		cout << "no puede avanzar" << endl;
 		hayPlan = false;
 		hayAldeanoEnfrente = true;
 		plan.clear();
@@ -267,6 +303,7 @@ Action ComportamientoJugador::think(Sensores sensores)
 
 	if (hayPlan && !plan.empty())
 	{
+
 
 		std::list<Action>::iterator it = plan.begin();
 		accion = *it;
@@ -398,6 +435,11 @@ int orientacionBrujula(Action accion, int brujula){
 	return nuevaBrujula;
 }
 
+/*
+bool ComportamientoJugador::busquedaAnchura(const estado &origen, const estado &destino, list<Action> &plan){
+	
+}
+*/
 int mod(int x, int m) {
 	return ((x%m) + m)%m;
 }
