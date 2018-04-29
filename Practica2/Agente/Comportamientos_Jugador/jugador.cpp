@@ -222,7 +222,6 @@ Action ComportamientoJugador::think(Sensores sensores)
 		hayPlan = false;
 		
 	}else if (hayPlan and (sensores.destinoF != destino.fila or sensores.destinoC != destino.columna)){
-		cout << "El destino ha cambiado\n";
 		hayPlan = false;
 	}
 
@@ -231,30 +230,23 @@ Action ComportamientoJugador::think(Sensores sensores)
 	origen.columna = col;
 	origen.orientacion = brujula;
 	Action accion = Action::actIDLE;
-	cout << fil << "-" << col << endl;
 	bool referencia = true;
 	if(fil == 99 || col == 99){
 		referencia = false;
-		cout << "No se donde estoy" << endl;
-		int i;
-		bool seVePk = false;
-		for(i = 0; i < 16 && !seVePk; i++){
-			cout << sensores.terreno[i] << "-";
-			if(sensores.terreno[i] == 'K'){
-				//seVePk = true;
-				cout << "Se vel el PK" << endl;
-			}
-		}
-		cout << endl;
-		 if(seVePk){
-			//origen.fila = 3;
-			//origen.columna = 3;
-			//Buscar un plan para llegar al punto PK
-			//hayPlan =
-		}else if(puedeAvanzar(sensores.terreno[2]) && sensores.superficie[2] != 'a')
+		
+		if(puedeAvanzar(sensores.terreno[2]) && sensores.superficie[2] != 'a' && movimientos  < rand()%20){
 			accion = Action::actFORWARD;
-		else
+			movimientos++;
+		}
+		else if(cantGiros == 2){
+			accion = Action::actTURN_R;
+			cantGiros = 0;		
+			movimientos = 0;				
+		}else{
 			accion = Action::actTURN_L;
+			cantGiros++;
+			movimientos = 0;							
+		}
 		
 
 	}else{
@@ -293,7 +285,6 @@ Action ComportamientoJugador::think(Sensores sensores)
 
 	}else if(sensores.superficie[2] == 'a' || !puedeAvanzar(sensores.terreno[2])  && referencia){
 	
-		cout << "no puede avanzar" << endl;
 		hayPlan = false;
 		hayAldeanoEnfrente = true;
 		plan.clear();
