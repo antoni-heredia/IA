@@ -1,1 +1,1 @@
-java -jar MancalaNoGUI.jar -p1 ./GreedyBot/GreedyBot -p2 ./RandomBot/RandomBot -t 2
+java -jar MancalaNoGUI.jar -p1 ./AlphaMancala/AlphaMancala -p2 ./RandomBot/RandomBot -t 2

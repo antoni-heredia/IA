@@ -1,6 +1,6 @@
 
 all:
-	g++ -oAlphaMancala *.cpp -I./ -lm -std=c++11
+	g++ -oAlumnoBot *.cpp -I./ -lm -std=c++11
 
 
 clean:

@@ -1,8 +1,7 @@
 /*
  * AlphaMancala.h
  *
- *  Created on: 15 ene. 2018
- *      Author: manupc
+ *  Author: Antonio Heredia Castillo
  */
 
 #include "Bot.h"
@@ -18,6 +17,9 @@ public:
 
 	void initialize();
 	string getName();
+	int menor_valor;
+	int mayor_valor;
+	Move mejor_accion;
 	Move nextMove(const vector<Move> & adversary, const GameState &state);
 
 	Move miniMax(const vector<Move>  & adversary,const GameState & state);
