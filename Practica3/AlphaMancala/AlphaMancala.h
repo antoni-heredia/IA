@@ -22,8 +22,11 @@ public:
 
 	Move miniMax(const vector<Move>  & adversary,const GameState & state);
 
-	int max(const vector<Move> & adversary, const GameState & state, const Player & jugador, int  alfa, int  beta, int profundidad, Move & movimiento);
-	int min(const vector<Move> & adversary, const GameState & state, const Player & jugador, int  alfa, int  beta, int profundidad, Move & movimiento);
+	int max(const vector<Move> & adversary, const GameState & state, const Player & jugador, int  alfa, int  beta, int profundidad, Move & movimiento,const int MAXP);
+	int min(const vector<Move> & adversary, const GameState & state, const Player & jugador, int  alfa, int  beta, int profundidad, Move & movimiento,const int MAXP);
+	int eval(const GameState & state,const Player & jugador);
+
+
 };
 
 #endif /* MANUPCBOT_H_ */
