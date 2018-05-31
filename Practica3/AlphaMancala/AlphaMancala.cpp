@@ -37,9 +37,7 @@ Move AlphaMancala::nextMove(const vector<Move> &adversary, const GameState &stat
 
 	Player turno= this->getPlayer();
 	Player contrincante;
-	
-	menor_valor = INT_MAX;
-	mayor_valor = INT_MIN;
+
 	long timeout= this->getTimeOut();
 
 	Move movimiento= M_NONE;
@@ -48,24 +46,23 @@ Move AlphaMancala::nextMove(const vector<Move> &adversary, const GameState &stat
 	int puntos= -10000;
 
 
-	int alfa = -50;
-	int beta = 50;
+	int alfa = INT_MIN;
+	int beta = INT_MAX;
 
-	return max(adversary,state, turno, alfa, beta,0).first;
+	max(adversary,state, turno, alfa, beta,0, movimiento);
+	return  movimiento;
 
 }
 
 
 
-pair<Move,int> AlphaMancala::max(const vector<Move> & adversary,const  GameState & state, const Player & jugador, int & alfa, int & beta, int profundidad){
+int AlphaMancala::max(const vector<Move> & adversary,const  GameState & state, const Player & jugador, int  alfa, int  beta, int profundidad, Move & movimiento){
 	//if(state.getScore(jugador)>25){
+ 	int v = INT_MIN;
 
-	if(profundidad == 7){
-		pair<Move,int> devolver;
-		devolver.first = mejor_accion;
-		devolver.second = mayor_valor;
-		//cerr << "if max" <<endl;
-		return devolver;
+	if(profundidad > 8){
+
+		return state.getScore(jugador);
 	}else{
 
 		for(int i=1; i<=6;i++){
@@ -76,78 +73,65 @@ pair<Move,int> AlphaMancala::max(const vector<Move> & adversary,const  GameState
 
 				//Calculamos el estado de realizar este movimiento
 				GameState hijo= state.simulateMove( (Move) i);
-				pair<Move,int> resultado = min(adversary,hijo,jugador,alfa,beta,profundidad+1);
-				if(mayor_valor<resultado.second){
-					mayor_valor = resultado.second;
-					mejor_accion = (Move)i;
-					cerr << "mejora:" << i << endl;
+				int resultado = 0;
+				if(hijo.getCurrentPlayer() == jugador){
+					resultado = max(adversary,hijo,jugador,alfa,beta,profundidad+1, movimiento);
+				}else{
+					resultado = min(adversary,hijo,jugador,alfa,beta,profundidad+1, movimiento);
 				}
-				if(mayor_valor >= beta){
-					pair<Move,int> devolver;
-					devolver.first = mejor_accion;
-					devolver.second = mayor_valor;
-							//cerr << "for max" <<endl;
-
-					return devolver;
+				
+				
+				if(resultado>v){
+					v = resultado;
+					movimiento = (Move) i;
 				}
-				if(mayor_valor > alfa){
-					alfa = mayor_valor;
+				if(v>=beta){
+					movimiento = (Move) i;
+					return v;
 				}
-
-			
+				alfa = (v>alfa) ? v : alfa;
 			}
 		}
 	}
 
-	pair<Move,int> devolver;
-	devolver.first = mejor_accion;
-	devolver.second = mayor_valor;
-				//cerr << "fuera max" <<endl;
-
-	return devolver; 
+	
+	return v; 
 }
 
-pair<Move,int> AlphaMancala::min(const vector<Move> & adversary,const  GameState & state, const Player & jugador, int & alfa, int & beta, int profundidad){
-		if(profundidad == 7){
-		pair<Move,int> devolver;
-		devolver.first = mejor_accion;
-		devolver.second = mayor_valor;
-		//cerr << "if min" <<endl;
+int AlphaMancala::min(const vector<Move> & adversary,const  GameState & state, const Player & jugador, int  alfa, int  beta, int profundidad, Move & movimiento){
+	int v = INT_MAX;
 
-		return devolver;
+	if(profundidad >8){
+		return state.getScore(jugador);
 	}else{
-		
+
 		for(int i=1; i<=6;i++){
-			//Para ver si es un movimiento valido
+				
 			if (state.getSeedsAt(jugador, (Position) i) >0) {
 
 				//Calculamos el estado de realizar este movimiento
-				GameState hijo= state.simulateMove( (Move) i);
-				pair<Move,int> resultado = max(adversary,hijo,jugador,alfa,beta,profundidad+1);
-				if(menor_valor>resultado.second){
-					menor_valor = resultado.second;
-					mejor_accion = (Move)i;
-					cerr << "mejora:" << i << endl;
+				GameState hijo = state.simulateMove( (Move) i);
+				int resultado;
+				if(hijo.getCurrentPlayer() == jugador){
+					resultado = min(adversary,hijo,jugador,alfa,beta,profundidad+1, movimiento);
+				}else
+					resultado = max(adversary,hijo,jugador,alfa,beta,profundidad+1, movimiento);
 
+			
+				v = (v > resultado) ? resultado : v;
+				if(resultado<v){
+					v = resultado;
+					movimiento = (Move) i;
 				}
-				if(menor_valor <= alfa){
-					pair<Move,int> devolver;
-					devolver.first = mejor_accion;
-					devolver.second = menor_valor;
-
-					return devolver;
+				if(v<=alfa){
+					movimiento = (Move) i;
+					return v;
 				}
-				if(menor_valor > beta)
-					beta = menor_valor;
-				
-				
+				beta = (v>beta) ? v : beta;
 			}
 		}
 	}
-	pair<Move,int> devolver;
-	devolver.first = mejor_accion;
-	devolver.second = menor_valor;
-										//cerr << "fuera min" <<endl;
 
-	return devolver; 
+	return v; 
+
 }
