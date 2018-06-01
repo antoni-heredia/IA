@@ -22,10 +22,11 @@ public:
 
 	Move miniMax(const vector<Move>  & adversary,const GameState & state);
 
-	int max(const vector<Move> & adversary, const GameState & state, const Player & jugador, int  alfa, int  beta, int profundidad, Move & movimiento,const int MAXP);
-	int min(const vector<Move> & adversary, const GameState & state, const Player & jugador, int  alfa, int  beta, int profundidad, Move & movimiento,const int MAXP);
+	pair<int,Move> max(const vector<Move> & adversary, const GameState & state, const Player & jugador, int  alfa, int  beta, int profundidad,const int MAXP);
+	pair<int,Move> min(const vector<Move> & adversary, const GameState & state, const Player & jugador, int  alfa, int  beta, int profundidad,const int MAXP);
 	int eval(const GameState & state,const Player & jugador);
 
+	int semillasJugador(const GameState & state, const Player & jugador);
 
 };
 
