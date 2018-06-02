@@ -48,40 +48,39 @@ Move AlphaMancala::nextMove(const vector<Move> &adversary, const GameState &stat
 
 	int alfa = INT_MIN;
 	int beta = INT_MAX;
-	int maxp = 9;
-
-	if(turno == Player::J2)
-		maxp = 6;
-	pair<int,Move> devolver = max(adversary,state, turno, alfa, beta,0,maxp);
+	int maxp = 10;
+	//if(turno == Player::J2)
+	//	maxp = 10;
+	pair<double,Move> devolver = max(adversary,state, turno, alfa, beta,0,maxp);
 	return  devolver.second;
 
 }
 
 
 
-pair<int,Move> AlphaMancala::max(const vector<Move> & adversary,const  GameState & state, const Player & jugador, int  alfa, int  beta, int profundidad ,const int MAXP){
+pair<double,Move> AlphaMancala::max(const vector<Move> & adversary,const  GameState & state, const Player & jugador, double  alfa, double  beta, int profundidad ,const int MAXP){
 	//if(state.getScore(jugador)>25){
 
-	if(profundidad > MAXP || state.isFinalState()){
+	if(profundidad == MAXP || state.isFinalState()){
 
-		int evaluacion = eval(state,jugador);
-		pair<int,Move> devolver (evaluacion,M_NONE);
+		double evaluacion = eval(state,jugador);
+		pair<double,Move> devolver (evaluacion,M_NONE);
 
 		return devolver;
 	}
 
- 	int mayor_valor = INT_MIN;
+ 	double mayor_valor = INT_MIN;
 	Move mejor_movimiento;
 	for(int i=1; i<=6;i++){
 
 		//Para ver si es un movimiento valido
-		if (state.getSeedsAt(jugador, (Position) i) >0) {
+		//if (state.getSeedsAt(jugador, (Position) i) >0) {
 
 			//Calculamos el estado de realizar este movimiento
 			GameState resultado= state.simulateMove( (Move) i);
-			pair<int,Move> utilidad;
+			pair<double,Move> utilidad;
 			
-			if(resultado.getCurrentPlayer() == jugador){
+			if(resultado.getCurrentPlayer() == state.getCurrentPlayer()){
 				utilidad = max(adversary,resultado,jugador,alfa,beta,profundidad+1,MAXP);
 			}else{
 				utilidad = min(adversary,resultado,jugador,alfa,beta,profundidad+1,MAXP);
@@ -91,81 +90,88 @@ pair<int,Move> AlphaMancala::max(const vector<Move> & adversary,const  GameState
 				mayor_valor = utilidad.first;
 				mejor_movimiento = (Move) i;
 			}
+
+			alfa = std::max(mayor_valor,alfa);		
+
 			if(beta<=alfa){
-				pair<int,Move> devolver (mayor_valor,mejor_movimiento);
+				pair<double,Move> devolver (mayor_valor,mejor_movimiento);
 				return devolver;
 			}
-			if(mayor_valor>alfa)
-				alfa = mayor_valor;
-		}
+
+			
+		//}
 	}
 
 
-	pair<int,Move> devolver (mayor_valor,mejor_movimiento);
+	pair<double,Move> devolver (mayor_valor,mejor_movimiento);
 	return devolver;
 }
-pair<int,Move> AlphaMancala::min(const vector<Move> & adversary,const  GameState & state, const Player & jugador, int  alfa, int  beta, int profundidad ,const int MAXP){
+pair<double,Move> AlphaMancala::min(const vector<Move> & adversary,const  GameState & state, const Player & jugador, double  alfa, double  beta, int profundidad ,const int MAXP){
 
 	
-	if( state.isFinalState()){
-		
-		int evaluacion = eval(state,jugador);
-		pair<int,Move> devolver (evaluacion,M_NONE);
+	if( profundidad == MAXP ||state.isFinalState()){
+		//cerr << "nodo min" << endl;
+		double evaluacion = eval(state,jugador);
+		pair<double,Move> devolver (evaluacion,M_NONE);
 		return devolver;
 	}
-	int menor_valor = INT_MAX;
+	double menor_valor = INT_MAX;
 	Move mejor_movimiento;
 
 	for(int i=1; i<=6;i++){
 			
-		if (state.getSeedsAt(jugador, (Position) i) >0) {
 
 			//Calculamos el estado de realizar este movimiento
 			GameState resultado = state.simulateMove( (Move) i);
-			pair<int,Move>  utilidad;
-			if(resultado.getCurrentPlayer() == jugador){
-				utilidad = max(adversary,resultado,jugador,alfa,beta,profundidad+1,MAXP);
-			}else{
+			pair<double,Move>  utilidad;
+			if(resultado.getCurrentPlayer() == state.getCurrentPlayer()){
 				utilidad = min(adversary,resultado,jugador,alfa,beta,profundidad+1,MAXP);
+			}else{
+				utilidad = max(adversary,resultado,jugador,alfa,beta,profundidad+1,MAXP);
 			}
 		
 			if(utilidad.first<menor_valor){
 				menor_valor = utilidad.first;
 				mejor_movimiento = (Move) i;
 			}
+
+			beta = std::min(menor_valor,beta);
+
 			if(beta<=alfa){
-				pair<int,Move> devolver (menor_valor,mejor_movimiento);
+				pair<double,Move> devolver (menor_valor,mejor_movimiento);
 				return devolver;
 			}
-			if(menor_valor<beta)
-				beta = menor_valor;
-		}
+			
+		
 	}
 	
-	pair<int,Move> devolver (menor_valor,mejor_movimiento);
+	pair<double,Move> devolver (menor_valor,mejor_movimiento);
 	return devolver;
 
 }
-int AlphaMancala::eval(const GameState & state, const Player & jugador){
+double AlphaMancala::eval(const GameState & state, const Player & jugador){
 	Player adversario;
 	if(jugador == Player::J1)
 		adversario = Player::J2;
 	else	
 		adversario = Player::J1;
 	
-	int devolver =0;
-	int evaluacion =  state.getScore(jugador)-state.getScore(adversario);
+	double devolver =0;
+	double evaluacion =  state.getScore(jugador)-state.getScore(adversario);
 
-	int semillasJug = semillasJugador(state,jugador);
-	int semillasAdv = semillasJugador(state,adversario);
+	double semillasJug = semillasJugador(state,jugador);
+	double semillasAdv = semillasJugador(state,adversario);
 
-	devolver = evaluacion;
+	double cuanto_le_falta = 24 - state.getScore(jugador);
+
+	devolver = evaluacion+evaluacion+(cuanto_le_falta)+(semillasJug*0.5)-(semillasAdv*0.5);
 
 	
 	
 	
 	return devolver;
 }
+
 
 int AlphaMancala::semillasJugador(const GameState & state, const Player & jugador){
 	int semillas = 0;
