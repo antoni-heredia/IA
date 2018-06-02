@@ -48,9 +48,8 @@ Move AlphaMancala::nextMove(const vector<Move> &adversary, const GameState &stat
 
 	int alfa = INT_MIN;
 	int beta = INT_MAX;
-	int maxp = 10;
-	//if(turno == Player::J2)
-	//	maxp = 10;
+	int maxp = 11;
+	
 	pair<double,Move> devolver = max(adversary,state, turno, alfa, beta,0,maxp);
 	return  devolver.second;
 
@@ -155,7 +154,8 @@ double AlphaMancala::eval(const GameState & state, const Player & jugador){
 		adversario = Player::J2;
 	else	
 		adversario = Player::J1;
-	
+	//Heuristica Antiguas	
+	/*
 	double devolver =0;
 	double evaluacion =  state.getScore(jugador)-state.getScore(adversario);
 
@@ -165,9 +165,16 @@ double AlphaMancala::eval(const GameState & state, const Player & jugador){
 	double cuanto_le_falta = 24 - state.getScore(jugador);
 
 	devolver = evaluacion+evaluacion+(cuanto_le_falta)+(semillasJug*0.5)-(semillasAdv*0.5);
-
+	*/
 	
-	
+	//Nueva heuristica sacada de http://eldar.mathstat.uoguelph.ca/dashlock/CIG2013/papers/paper_45.pdf
+	int h1 = state.getSeedsAt(jugador,(Position)6);
+	int h2 = semillasJugador(state,jugador);
+	int h3 = cantDeContadoresDisponibles(state,jugador);
+	int h4 = state.getScore(jugador);
+	int h5 = state.getSeedsAt(jugador,(Position)0);
+	int h6 = cantDeContadoresDisponibles(state,adversario);
+	double devolver = (h1*0.126 )+(h2*0.104)+(h3*0.564)+h4+(h5*0.51 )-(h6*0.605);
 	
 	return devolver;
 }
@@ -178,4 +185,12 @@ int AlphaMancala::semillasJugador(const GameState & state, const Player & jugado
 	for(int i = 0; i <=6; i++)
 		semillas += state.getSeedsAt(jugador,(Position)i);
 	return semillas;
+}
+
+int AlphaMancala::cantDeContadoresDisponibles(const GameState & state, const Player & jugador){
+	int disponible = 0;
+	for(int i = 0; i <=6; i++)
+		if(state.getSeedsAt(jugador,(Position)i) > 0)
+		disponible++;
+	return disponible;
 }

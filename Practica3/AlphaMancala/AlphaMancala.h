@@ -27,6 +27,7 @@ public:
 	double eval(const GameState & state,const Player & jugador);
 
 	int semillasJugador(const GameState & state, const Player & jugador);
+	int cantDeContadoresDisponibles(const GameState & state, const Player & jugador);
 
 };
 
